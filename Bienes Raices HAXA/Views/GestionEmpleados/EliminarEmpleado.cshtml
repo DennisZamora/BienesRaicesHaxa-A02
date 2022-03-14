@@ -1,0 +1,72 @@
+﻿@using Bienes_Raices_HAXA.Models
+@{
+    var empleado = ViewData["empleado"] as Usuario;
+}
+
+@{
+    ViewBag.Title = "EliminarEmpleado";
+}
+
+@Styles.Render("~/Content/Format.css")
+
+<h2>Eliminar Empleado</h2>
+
+@using (Html.BeginForm("Eliminar", "GestionEmpleados", FormMethod.Post))
+{
+@Html.Label("lblId", "Id", new { @class = "form-label" })
+<br />
+@Html.TextBox("idUsuario", empleado.idUsuario, new { placeholder = empleado.idUsuario, @readonly = true })
+<br />
+
+@Html.Label("lblCedula", "Cedula", new { @class = "form-label" })
+<br />
+@Html.TextBox("identificacion", empleado.cedula_identificacion, new { placeholder = empleado.cedula_identificacion, @readonly = true })
+<br />
+
+@Html.Label("lblNombre", "Nombre", new { @class = "form-label" })
+<br />
+@Html.TextBox("nombre", empleado.nombre, new { placeholder = empleado.nombre, @readonly = true })
+<br />
+
+@Html.Label("lblApellido1", "Primer Apellido", new { @class = "form-label" })
+<br />
+@Html.TextBox("apellido1", empleado.apellido1, new { placeholder = empleado.apellido1, @readonly = true })
+<br />
+
+@Html.Label("lblApellido2", "Segundo Apellido", new { @class = "form-label" })
+<br />
+@Html.TextBox("apellido2", empleado.apellido2, new { placeholder = empleado.apellido2, @readonly = true })
+<br />
+
+@Html.Label("lblEmail", "Email", new { @class = "form-label" })
+<br />
+@Html.TextBox("email", empleado.email, new { placeholder = empleado.email, @readonly = true })
+<br />
+
+@Html.Label("lblPassword", "Contraseña", new { @class = "form-label" })
+<br />
+@Html.TextBox("password", empleado.password, new { placeholder = empleado.password, @readonly = true})
+<br />
+
+@Html.Label("lblRol", "Rol", new { @class = "form-label" })
+<br />
+@Html.TextBox("rol", empleado.rol, new { placeholder = empleado.rol, @readonly = true })
+<br />
+
+@Html.Label("lblPais", "Pais", new { @class = "form-label" })
+<br />
+@Html.TextBox("pais", empleado.pais, new { placeholder = empleado.pais, @readonly = true })
+<br />
+
+@Html.Label("lblCiudad", "Ciudad", new { @class = "form-label" })
+<br />
+@Html.TextBox("ciudad", empleado.ciudad, new { placeholder = empleado.ciudad, @readonly = true })
+<br />
+
+@Html.Label("lblProvincia", "Provincia", new { @class = "form-label" })
+<br />
+@Html.TextBox("estado_provincia_region", empleado.estado_provincia_region, new { placeholder = empleado.estado_provincia_region, @readonly = true})
+<br />
+<input type="submit" value="Eliminar" />
+
+}

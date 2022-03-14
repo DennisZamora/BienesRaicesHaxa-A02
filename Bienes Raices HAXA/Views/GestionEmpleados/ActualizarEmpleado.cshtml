@@ -1,0 +1,72 @@
+﻿@using Bienes_Raices_HAXA.Models
+@{
+    var empleado = ViewData["empleado"] as Usuario;
+}
+
+@{
+    ViewBag.Title = "ActualizarEmpleado";
+}
+
+@Styles.Render("~/Content/Format.css")
+
+<h2>Actualizar Empleado</h2>
+
+@using (Html.BeginForm("Actualizar", "GestionEmpleados", FormMethod.Post))
+{
+@Html.Label("lblId", "Id", new { @class = "form-label" })
+<br />
+@Html.TextBox("idUsuario", empleado.idUsuario, new { placeholder = empleado.idUsuario })
+<br />
+
+@Html.Label("lblCedula", "Cedula", new { @class = "form-label" })
+<br />
+@Html.TextBox("identificacion", empleado.cedula_identificacion, new { placeholder = empleado.cedula_identificacion })
+<br />
+
+@Html.Label("lblNombre", "Nombre", new { @class = "form-label" })
+<br />
+@Html.TextBox("nombre", empleado.nombre, new { placeholder = empleado.nombre })
+<br />
+
+@Html.Label("lblApellido1", "Primer Apellido", new { @class = "form-label" })
+<br />
+@Html.TextBox("apellido1", empleado.apellido1, new { placeholder = empleado.apellido1 })
+<br />
+
+@Html.Label("lblApellido2", "Segundo Apellido", new { @class = "form-label" })
+<br />
+@Html.TextBox("apellido2", empleado.apellido2, new { placeholder = empleado.apellido2 })
+<br />
+
+@Html.Label("lblEmail", "Email", new { @class = "form-label" })
+<br />
+@Html.TextBox("email", empleado.email, new { placeholder = empleado.email })
+<br />
+
+@Html.Label("lblPassword", "Contraseña", new { @class = "form-label" })
+<br />
+@Html.TextBox("password", empleado.password, new { placeholder = empleado.password })
+<br />
+
+@Html.Label("lblRol", "Rol", new { @class = "form-label" })
+<br />
+@Html.TextBox("rol", empleado.rol, new { placeholder = empleado.rol })
+<br />
+
+@Html.Label("lblPais", "Pais", new { @class = "form-label" })
+<br />
+@Html.TextBox("pais", empleado.pais, new { placeholder = empleado.pais })
+<br />
+
+@Html.Label("lblCiudad", "Ciudad", new { @class = "form-label" })
+<br />
+@Html.TextBox("ciudad", empleado.ciudad, new { placeholder = empleado.ciudad })
+<br />
+
+@Html.Label("lblEstado_provincia_region", "Provincia", new { @class = "form-label" })
+<br />
+@Html.TextBox("estado_provincia_region", empleado.estado_provincia_region, new {placeholder = empleado.estado_provincia_region })
+<br />
+<input type="submit" value="Actualizar" />
+
+}

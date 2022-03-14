@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "5fcd6708-c5fb-41b2-87f4-290c71660814": {
+      "ProjectGuid": "5fcd6708-c5fb-41b2-87f4-290c71660814",
+      "DisplayName": "Bienes Raices HAXA",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
+    },
+    "f4b2211c-a051-4aea-bd93-7266b9d9b187": {
+      "ProjectGuid": "f4b2211c-a051-4aea-bd93-7266b9d9b187",
+      "DisplayName": "Bienes Raices HAXA.Tests",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

@@ -1,0 +1,91 @@
+﻿@model Bienes_Raices_HAXA.Models.Propiedad
+
+@{
+    ViewBag.Title = "Agregar propiedades";
+    List<SelectListItem> items = (List<SelectListItem>)ViewBag.items;
+}
+@Styles.Render("~/CSS/style.css")
+
+<body id="myId">
+    @using (Html.BeginForm("AddPropiedades", "AddPropiedad", FormMethod.Post, new { @id = "msform" }))
+    {
+    <section class="register-account">
+
+        <div class="form">
+            <form class="login-form" id="login-form">
+                <div class="left">
+                    <div class="row">
+                        @Html.Label("lblNombreDueño", "ID del dueño de la proopiedad")<br />
+                        @Html.TextBoxFor(m => m.idUsuario, ViewBag.usuario as String , new { @class = "form-control", ReadOnly = true })
+                    </div><br />
+                    <div class="row">
+                        @Html.Label("lblnombre", "Nombre de la propiedad")
+                        @Html.TextBoxFor(m => m.nombre, new { @class = "form-control"})
+                    </div>
+                    <div class="row">
+                        @Html.Label("lbldescripcion", "Descripcion")
+                        @Html.TextBoxFor(m => m.descripcion, new { @class = "form-control" })
+                    </div>
+                    <div class="row">
+                        @Html.Label("lblcategoria", "Categoria")
+                        @Html.DropDownListFor(m => m.idCategoria, ViewBag.cat as List<SelectListItem>, new { @class = "form-control" })
+                    </div>
+                    <div class="row">
+                        @Html.Label("lblPrecio", "Precio")
+                        @Html.TextBoxFor(m => m.precio, new { @class = "form-control" })
+                    </div>
+                    <div class="row">
+                        @Html.Label("lblestado", "Estado")
+                        @Html.DropDownListFor(m => m.idEstado, ViewBag.est as List<SelectListItem>, new { @class = "form-control" })
+                    </div>
+                    <div class="row">
+                        @Html.Label("lblprovincia", "Provincia")
+                        @Html.TextBoxFor(m => m.provincia, new { @class = "form-control" })
+                    </div>
+                    <div class="row">
+                        @Html.Label("lblcanton", "Canton")
+                        @Html.TextBoxFor(m => m.canton, new { @class = "form-control" })
+                    </div>
+                    <div class="row">
+                        @Html.Label("lbldistrito", "Distrito")
+                        @Html.TextBoxFor(m => m.distrito, new { @class = "form-control" })
+                    </div>
+                    <div class="row">
+                        @Html.Label("lbldireccionexacta", "Direccion")
+                        @Html.TextBoxFor(m => m.direccion, new { @class = "form-control" })
+                    </div>
+                    <div class="row">
+                        @Html.Label("lblm2", "M2")
+                        @Html.TextBoxFor(m => m.m2, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="row">
+                        @Html.Label("lblhabitaciones", "Habitaciones")
+                        @Html.TextBoxFor(m => m.habitacion, new { @class = "form-control" })
+                    </div>
+                    <div class="row">
+                        @Html.Label("lblbaños", "Baños")
+                        @Html.TextBoxFor(m => m.baños, new { @class = "form-control" })
+                    </div>
+                    <div class="row">
+                        @Html.Label("lblniveles", "Niveles")
+                        @Html.TextBoxFor(m => m.pisos, new { @class = "form-control" })
+                    </div>
+                    <div class="row">
+                        @Html.Label("lblparking", "Parqueo")
+                        @Html.TextBoxFor(m => m.garage, new { @class = "form-control" })
+                    </div>
+                </div>
+                <br />
+                <button class="w3-button" type="submit">Agregar Propiedad</button>
+            </form>
+        </div>
+    </section>
+    }
+</body>
+
+@section Scripts
+{
+    @Scripts.Render("/Functions/AddPropiedad.js")
+}

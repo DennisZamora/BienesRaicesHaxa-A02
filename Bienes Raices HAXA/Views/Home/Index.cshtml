@@ -1,0 +1,138 @@
+﻿@model IEnumerable<Bienes_Raices_HAXA.Models.PropiedadV>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        @{ ViewBag.Title = "Haxa Bienes Raices"; }
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @Styles.Render("~/Content/main.css")
+    @Styles.Render("~/Content/shopify.css")
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="w3-display-container w3-content w3-wide" style="max-width:700px;" id="home">
+        <img class="w3-image" src="~/Content/images/Portada-bienes-raices.jpg" alt="Architecture" width="1400" height="400">
+        <div class="w3-display-middle w3-margin-top w3-center">
+            <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>BR</b></span> <span class="w3-hide-small w3-text-light-grey">Haxa</span></h1>
+        </div>
+    </header>
+
+    <!-- Page content -->
+    <div class="w3-content w3-padding" style="max-width:1564px">
+
+        <!-- Property Section -->
+        <div class="w3-container" id="property">
+            <h3 class="w3-border-bottom w3-border-light-grey" style="text-align:center;">Propiedades</h3>
+        </div>
+
+        <div class="w3-row-padding">
+            <div class="boost-pfs-filter-products boost-pfs-filter-product-item-layout-no-border boost-pfs-filter-product-item-label-top_left boost-pfs-filter-product-item-swatch_color_display_type_image_product boost-pfs-filter-swatch-shape-circle boost-pfs-filter-product-item-text-alignment-left" style="min-height: 0px;">
+                <!-- Todas las propiedades aqui -->
+                @{int count = 1; @*int countEnd = 0;*@}
+                <!--agregar datos a la bd-->
+                @foreach (var item in Model)
+                {
+                <div class="boost-pfs-filter-product-item boost-pfs-filter-product-item-grid boost-pfs-filter-grid-width-3 boost-pfs-filter-grid-width-mb-1 has-bc-swap-image" data-id="6582722756704" data-page="@count">
+                    <div class="boost-pfs-filter-product-item-inner">
+                        <div class="boost-pfs-filter-product-item-image">
+                            <a href="@Url.Action("Propiedad","Home",new {id=@item.Property.idPropiedad})" class="boost-pfs-filter-product-item-image-link" style="padding-top:100%;">
+                                @{int lengthImg = item.Img.Count; }
+                                @switch (lengthImg)
+                    {
+
+                        case 1:
+                                <img class="boost-pfs-filter-product-item-main-image Image--lazyLoad lazyautosizes ls-is-cached lazyloaded"
+                                     data-src="@item.Img[0].link"
+                                     data-widths="[180,360,540,720,900,1080,1296,1512,1728,2048]" data-sizes="auto"
+                                     src="@item.Img[0].link"
+                                     alt="@item.Property.nombre" sizes="auto" />
+                                <img class="boost-pfs-filter-product-item-flip-image Image--lazyLoad lazyautosizes ls-is-cached lazyloaded"
+                                     data-src="@item.Img[0].link"
+                                     data-widths="[180,360,540,720,900,1080,1296,1512,1728,2048]" data-sizes="auto"
+                                     src="@item.Img[0].link"
+                                     alt="@item.Property.nombre" sizes="auto" /> break;
+                                                case 0:
+                                <img class="boost-pfs-filter-product-item-main-image Image--lazyLoad lazyautosizes ls-is-cached lazyloaded"
+                                     data-src="~/Content/images/Portada-bienes-raices.jpg"
+                                     data-widths="[180,360,540,720,900,1080,1296,1512,1728,2048]" data-sizes="auto"
+                                     src="~/Content/images/Portada-bienes-raices.jpg"
+                                     alt="@item.Property.nombre" sizes="auto" />
+                                <img class="boost-pfs-filter-product-item-flip-image Image--lazyLoad lazyautosizes ls-is-cached lazyloaded"
+                                     data-src="~/Content/images/Portada-bienes-raices.jpg"
+                                     data-widths="[180,360,540,720,900,1080,1296,1512,1728,2048]" data-sizes="auto"
+                                     src="~/Content/images/Portada-bienes-raices.jpg"
+                                     alt="@item.Property.nombre" sizes="auto" /> break;
+                                                                        default:
+                                <img class="boost-pfs-filter-product-item-main-image Image--lazyLoad lazyautosizes ls-is-cached lazyloaded"
+                                     data-src="@item.Img[0].link"
+                                     data-widths="[180,360,540,720,900,1080,1296,1512,1728,2048]" data-sizes="auto"
+                                     src="@item.Img[0].link"
+                                     alt="@item.Property.nombre" sizes="auto" />
+                                <img class="boost-pfs-filter-product-item-flip-image Image--lazyLoad lazyautosizes ls-is-cached lazyloaded"
+                                     data-src="@item.Img[1].link"
+                                     data-widths="[180,360,540,720,900,1080,1296,1512,1728,2048]" data-sizes="auto"
+                                     src="@item.Img[1].link"
+                                     alt="@item.Property.nombre" sizes="auto" />break;
+                                                                                            }
+                            </a>
+                            @*<div class="boost-pfs-filter-product-item-label">
+                                    <span class="tag boost-pfs-filter-label tagblack-friday-2021">Oferta</span>
+
+                                    <span class="tag boost-pfs-filter-label tagcon-obsequio">Destacada</span>
+                                </div>*@
+                        </div>
+
+                        <div class="boost-pfs-filter-product-bottom">
+
+                            <a href="@Url.Action("Propiedad","Home",new {id=item.Property.idPropiedad})" class="boost-pfs-product-item-manufacturer">@item.Property.nombre</a>
+                            <a href="@Url.Action("Propiedad","Home",new {id=item.Property.idPropiedad})" class="boost-pfs-filter-product-item-title">@item.Property.descripcion</a>
+                            <!-- <p class="boost-pfs-filter-product-item-vendor">Promadis S.A.</p> -->
+
+                            <div class="testfreaks-item tf-item-tracked testfreaks-loaded" data-product-id="50SUC9300">
+                                <div class="testfreaks-items">
+                                    <div title="5.0 / 5" class="testfreaks">
+                                        <div class="tf-stars tf-stars-svg">
+                                            <div class="tf-stars-svg tf-stars-fg">
+                                            </div>
+                                        </div>
+                                        <div class="tf-based">
+                                            <div class="tf-count">@item.Property.m2 m2</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="@Url.Action("Propiedad","Home",new {id=item.Property.idPropiedad})">
+                                <p class="boost-pfs-filter-product-item-price">
+                                    <!--if descuento--> <!--<s><span class="money">₡381,900</span></s>--> <!--if descuento-->
+                                    <span class="boost-pfs-filter-product-item-sale-price">
+                                        <span class="money">@item.Property.precio</span>
+                                    </span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--if count % 3 = 0
+                insrt otra linea
+                -->}
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="w3-container w3-padding-32" id="about">
+            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Acerca de HAXA</h3>
+            <p>
+                <!-- Todo Acerca de aqui -->
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+
+        <!-- End page content -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿@model Bienes_Raices_HAXA.Models.Categoria
+
+@{ List<SelectListItem> dropList = (List<SelectListItem>)ViewBag.droplist;
+
+}
+@*@using(Html.BeginForm("BusquedaCategoria", "Reporte", FormMethod.Post))
+    {
+        @Html.DropDownListFor(m => m.idCategoria, ViewBag.dropList as List<SelectListItem>, new { @class = "form-control"})
+        <input type="submit" value="buscar" class="form-control" />
+    }*@
+
+@using (Html.BeginForm("BusquedaCategoria", "Reporte", FormMethod.Post))
+{
+@Html.DropDownListFor(x => x.idCategoria, new SelectList(dropList, "Value", "Text"), new { @id = "idCategoria" })
+<input type="submit" value="buscar" class="form-control" />
+}
