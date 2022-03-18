@@ -1,57 +1,33 @@
-﻿using Bienes_Raices_HAXA.Filters;
-using Bienes_Raices_HAXA.Models;
+﻿using Bienes_Raices_HAXA.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Bienes_Raices_HAXA.Controllers
 {
-    [VerificacionSesion]
     public class GestionEmpleadosController : Controller
     {
-        // GET: GestionEmpleados
         public ActionResult GestionEmpleados()
         {
-            GestionUsuariosModel model = new GestionUsuariosModel();
+            GestionEmpleadosModel model = new GestionEmpleadosModel();
 
             var listaEmpleados = model.ObtenerEmpleados();
 
             return View(listaEmpleados);
         }
 
-        //[HttpPost]
-        public ActionResult ActualizarEmpleado(string identificacion)
+
+        public ActionResult EliminarEmpleados(string identificacion)
         {
-            GestionUsuariosModel model = new GestionUsuariosModel();
+            GestionEmpleadosModel model = new GestionEmpleadosModel();
 
             var empleado = model.buscarEmpleado(identificacion);
 
             if (empleado != null)
             {
-                ViewData["Empleado"] = empleado;
-                return View();
-            }
-            else
-            {
-                return View("~/Views/Shared/Error.cshtml");
-            }
-        }
-
-        public ActionResult Actualizar(Usuario empleado)
-        {
-            GestionUsuariosModel model = new GestionUsuariosModel();
-            model.actualizarEmpleado(empleado);
-
-            return RedirectToAction("Index", "Home");
-        }
-
-        public ActionResult EliminarEmpleado(string identificacion)
-        {
-            GestionUsuariosModel model = new GestionUsuariosModel();
-
-            var empleado = model.buscarEmpleado(identificacion);
-
-            if (empleado != null)
-            {
-                ViewData["Empleado"] = empleado;
+                ViewData["empleado"] = empleado;
                 return View();
             }
             else
@@ -62,10 +38,49 @@ namespace Bienes_Raices_HAXA.Controllers
 
         public ActionResult Eliminar(Usuario empleado)
         {
-            GestionUsuariosModel model = new GestionUsuariosModel();
+            GestionEmpleadosModel model = new GestionEmpleadosModel();
             model.eliminarEmpleado(empleado);
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("GestionEmpleados", "GestionEmpleados");
+        }
+
+        public ActionResult ActualizarEmpleados(string identificacion)
+        {
+            GestionEmpleadosModel model = new GestionEmpleadosModel();
+
+            var empleado = model.buscarEmpleado(identificacion);
+
+            if (empleado != null)
+            {
+                ViewData["empleado"] = empleado;
+                return View();
+            }
+            else
+            {
+                return View("~/Views/Shared/Error.cshtml");
+            }
+        }
+
+        public ActionResult Actualizar(Usuario empleado)
+        {
+            GestionEmpleadosModel model = new GestionEmpleadosModel();
+            model.actualizaEmpleado(empleado);
+
+            return RedirectToAction("GestionEmpleados", "GestionEmpleados");
+        }
+
+        public ActionResult RegistrarEmpleados()
+        {
+            return View();
+        }
+
+        public ActionResult Registrar(Usuario empleado)
+        {
+            GestionEmpleadosModel model = new GestionEmpleadosModel();
+
+            model.registrarEmpleado(empleado);
+
+            return RedirectToAction("GestionEmpleados", "GestionEmpleados");
         }
     }
 }
