@@ -315,6 +315,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="JS\AgregarCita.js" />
+    <Content Include="JS\index.js" />
     <Content Include="JS\perfil.js" />
     <Content Include="lib\limonte-sweetalert2\sweetalert2.all.js" />
     <Content Include="lib\limonte-sweetalert2\sweetalert2.all.min.js" />

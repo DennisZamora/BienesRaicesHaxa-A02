@@ -46,6 +46,43 @@ namespace Bienes_Raices_HAXA.Controllers
             }
         }
 
+        [HttpPost]
+        public ActionResult Filtrar(PropiedadV propiedad)
+        {
+            try
+            {
+                var categorias = action.CategoriasSeleccion();
+
+                List<SelectListItem> comboCat = new List<SelectListItem>();
+                foreach (var item in categorias)
+                {
+                    comboCat.Add(new SelectListItem
+                    {
+                        Value = item.idCategoria.ToString(),
+                        Text = item.nombre.ToString(),
+                    });
+                }
+                ViewBag.cat = comboCat;
+
+                var propiedades = action.ListarPropiedades();
+                Session["Propiedades"] = propiedades;
+
+                // Verificar si la lista esta vacía
+                if (propiedades.Count > 0)
+                {
+                    return View("Index", propiedades);
+                }
+                else
+                {
+                    return View("Index", new List<PropiedadV>());
+                }
+            }
+            catch (Exception)
+            {
+                return View("~/Shared/Error.cshtml");
+            }
+        }
+
         [HttpGet]
         public ActionResult Propiedad(long id)
         {
