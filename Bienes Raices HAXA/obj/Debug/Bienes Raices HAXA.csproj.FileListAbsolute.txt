@@ -95,3 +95,100 @@ D:\Universidad\Vll\DiseñoDesarrolloSistemas\Analis2-Git-Proyecto\Analisis2-Desa
 D:\Universidad\Vll\DiseñoDesarrolloSistemas\Analis2-Git-Proyecto\Analisis2-Desarrollo\Bienes Raices HAXA\obj\Debug\Bienes Raices HAXA.csproj.CopyComplete
 D:\Universidad\Vll\DiseñoDesarrolloSistemas\Analis2-Git-Proyecto\Analisis2-Desarrollo\Bienes Raices HAXA\obj\Debug\Bienes Raices HAXA.dll
 D:\Universidad\Vll\DiseñoDesarrolloSistemas\Analis2-Git-Proyecto\Analisis2-Desarrollo\Bienes Raices HAXA\obj\Debug\Bienes Raices HAXA.pdb
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Bienes Raices HAXA.dll.config
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Bienes Raices HAXA.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Bienes Raices HAXA.pdb
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\csc.exe
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\csc.exe.config
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\csc.rsp
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\csi.exe
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\csi.exe.config
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\csi.rsp
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\System.Buffers.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\System.Memory.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\vbc.exe
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\vbc.exe.config
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\vbc.rsp
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\VBCSCompiler.exe
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Antlr3.Runtime.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\CloudinaryDotNet.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\EntityFramework.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\EntityFramework.SqlServer.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Microsoft.Extensions.Options.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Microsoft.Extensions.WebEncoders.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Newtonsoft.Json.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Rotativa.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.CodeDom.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.Numerics.Vectors.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.Text.Encodings.Web.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.Web.Helpers.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.Web.Mvc.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.Web.Optimization.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.Web.Razor.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.Web.WebPages.Deployment.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.Web.WebPages.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.Web.WebPages.Razor.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\WebGrease.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Xamarin.Essentials.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\CloudinaryDotNet.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\EntityFramework.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\EntityFramework.SqlServer.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Microsoft.AspNetCore.Html.Abstractions.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Microsoft.Extensions.Options.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Microsoft.Extensions.WebEncoders.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Newtonsoft.Json.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.CodeDom.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.Numerics.Vectors.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.Text.Encodings.Web.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.Web.Helpers.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.Web.Mvc.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.Web.Optimization.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.Web.Razor.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.Web.WebPages.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.Web.WebPages.Deployment.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\System.Web.WebPages.Razor.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Antlr3.Runtime.pdb
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Xamarin.Essentials.pdb
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Xamarin.Essentials.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\es\System.Web.Helpers.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\es\System.Web.Mvc.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\es\System.Web.Optimization.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\es\System.Web.Razor.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\es\System.Web.WebPages.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\obj\Debug\Bienes Raices HAXA.csproj.AssemblyReference.cache
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\obj\Debug\Bienes Raices HAXA.csproj.CoreCompileInputs.cache
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\obj\Debug\Bienes Raices HAXA.csproj.CopyComplete
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\obj\Debug\Bienes Raices HAXA.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\obj\Debug\Bienes Raices HAXA.pdb

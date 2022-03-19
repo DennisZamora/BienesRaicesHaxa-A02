@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BRHaxaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="idCategoria" />
+    </Key>
+    <Property Name="idCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Propiedad" Relationship="Self.fk_propiedad_categoria" FromRole="Categoria" ToRole="Propiedad" />
+  </EntityType>
+  <EntityType Name="Citas">
+    <Key>
+      <PropertyRef Name="idCita" />
+    </Key>
+    <Property Name="idCita" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idUsuario" Type="Int64" Nullable="false" />
+    <Property Name="idPropiedad" Type="Int64" Nullable="false" />
+    <Property Name="titulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaInicio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaFinal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Propiedad" Relationship="Self.fk_cita_propiedad" FromRole="Citas" ToRole="Propiedad" />
+    <NavigationProperty Name="Usuario" Relationship="Self.fk_cita_usuario" FromRole="Citas" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="idEstado" />
+    </Key>
+    <Property Name="idEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Propiedad" Relationship="Self.fk_propiedad_estado" FromRole="Estado" ToRole="Propiedad" />
+  </EntityType>
+  <EntityType Name="Imagenes">
+    <Key>
+      <PropertyRef Name="idImagen" />
+    </Key>
+    <Property Name="idImagen" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idPropiedad" Type="Int64" Nullable="false" />
+    <Property Name="link" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Propiedad" Relationship="Self.fk_imagenes_propiedad" FromRole="Imagenes" ToRole="Propiedad" />
+  </EntityType>
+  <EntityType Name="Propiedad">
+    <Key>
+      <PropertyRef Name="idPropiedad" />
+    </Key>
+    <Property Name="idPropiedad" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="75" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="provincia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="canton" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="distrito" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="idCategoria" Type="Int32" Nullable="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <Property Name="pisos" Type="Int32" />
+    <Property Name="m2" Type="Int32" />
+    <Property Name="habitacion" Type="Int32" />
+    <Property Name="baños" Type="Int32" />
+    <Property Name="garage" Type="Int32" />
+    <Property Name="idUsuario" Type="Int64" Nullable="false" />
+    <Property Name="idVendedor" Type="Int64" />
+    <Property Name="precio" Type="String" MaxLength="75" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Categoria" Relationship="Self.fk_propiedad_categoria" FromRole="Propiedad" ToRole="Categoria" />
+    <NavigationProperty Name="Citas" Relationship="Self.fk_cita_propiedad" FromRole="Propiedad" ToRole="Citas" />
+    <NavigationProperty Name="Estado" Relationship="Self.fk_propiedad_estado" FromRole="Propiedad" ToRole="Estado" />
+    <NavigationProperty Name="Imagenes" Relationship="Self.fk_imagenes_propiedad" FromRole="Propiedad" ToRole="Imagenes" />
+    <NavigationProperty Name="Usuario" Relationship="Self.fk_propiedad_usuario" FromRole="Propiedad" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.fk_propiedad_vendedor" FromRole="Propiedad" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="idRol" />
+    </Key>
+    <Property Name="idRol" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombreRol" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Usuario" Relationship="Self.fk_usuario_rol" FromRole="Rol" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cedula_identificacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellido1" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellido2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="idRol" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Citas" Relationship="Self.fk_cita_usuario" FromRole="Usuario" ToRole="Citas" />
+    <NavigationProperty Name="Propiedad" Relationship="Self.fk_propiedad_usuario" FromRole="Usuario" ToRole="Propiedad" />
+    <NavigationProperty Name="Propiedad1" Relationship="Self.fk_propiedad_vendedor" FromRole="Usuario" ToRole="Propiedad" />
+    <NavigationProperty Name="Rol" Relationship="Self.fk_usuario_rol" FromRole="Usuario" ToRole="Rol" />
+  </EntityType>
+  <EntityType Name="database_firewall_rules">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="start_ip_address" />
+      <PropertyRef Name="end_ip_address" />
+      <PropertyRef Name="create_date" />
+      <PropertyRef Name="modify_date" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="start_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="end_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modify_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="ipv6_database_firewall_rules">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="start_ipv6_address" />
+      <PropertyRef Name="end_ipv6_address" />
+      <PropertyRef Name="create_date" />
+      <PropertyRef Name="modify_date" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="start_ipv6_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="end_ipv6_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modify_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <Association Name="fk_propiedad_categoria">
+    <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
+    <End Role="Propiedad" Type="Self.Propiedad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="idCategoria" />
+      </Principal>
+      <Dependent Role="Propiedad">
+        <PropertyRef Name="idCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_cita_propiedad">
+    <End Role="Propiedad" Type="Self.Propiedad" Multiplicity="1" />
+    <End Role="Citas" Type="Self.Citas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Propiedad">
+        <PropertyRef Name="idPropiedad" />
+      </Principal>
+      <Dependent Role="Citas">
+        <PropertyRef Name="idPropiedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_cita_usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Citas" Type="Self.Citas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Citas">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_propiedad_estado">
+    <End Role="Estado" Type="Self.Estado" Multiplicity="1" />
+    <End Role="Propiedad" Type="Self.Propiedad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="Propiedad">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_imagenes_propiedad">
+    <End Role="Propiedad" Type="Self.Propiedad" Multiplicity="1" />
+    <End Role="Imagenes" Type="Self.Imagenes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Propiedad">
+        <PropertyRef Name="idPropiedad" />
+      </Principal>
+      <Dependent Role="Imagenes">
+        <PropertyRef Name="idPropiedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_propiedad_usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Propiedad" Type="Self.Propiedad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Propiedad">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_propiedad_vendedor">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Propiedad" Type="Self.Propiedad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="Propiedad">
+        <PropertyRef Name="idVendedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_usuario_rol">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="idRol" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="idRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BRHaxaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categoria" EntityType="Self.Categoria" />
+    <EntitySet Name="Citas" EntityType="Self.Citas" />
+    <EntitySet Name="Estado" EntityType="Self.Estado" />
+    <EntitySet Name="Imagenes" EntityType="Self.Imagenes" />
+    <EntitySet Name="Propiedad" EntityType="Self.Propiedad" />
+    <EntitySet Name="Rol" EntityType="Self.Rol" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" />
+    <EntitySet Name="ipv6_database_firewall_rules" EntityType="Self.ipv6_database_firewall_rules" />
+    <AssociationSet Name="fk_propiedad_categoria" Association="Self.fk_propiedad_categoria">
+      <End Role="Categoria" EntitySet="Categoria" />
+      <End Role="Propiedad" EntitySet="Propiedad" />
+    </AssociationSet>
+    <AssociationSet Name="fk_cita_propiedad" Association="Self.fk_cita_propiedad">
+      <End Role="Propiedad" EntitySet="Propiedad" />
+      <End Role="Citas" EntitySet="Citas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_cita_usuario" Association="Self.fk_cita_usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Citas" EntitySet="Citas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_propiedad_estado" Association="Self.fk_propiedad_estado">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Propiedad" EntitySet="Propiedad" />
+    </AssociationSet>
+    <AssociationSet Name="fk_imagenes_propiedad" Association="Self.fk_imagenes_propiedad">
+      <End Role="Propiedad" EntitySet="Propiedad" />
+      <End Role="Imagenes" EntitySet="Imagenes" />
+    </AssociationSet>
+    <AssociationSet Name="fk_propiedad_usuario" Association="Self.fk_propiedad_usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Propiedad" EntitySet="Propiedad" />
+    </AssociationSet>
+    <AssociationSet Name="fk_propiedad_vendedor" Association="Self.fk_propiedad_vendedor">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Propiedad" EntitySet="Propiedad" />
+    </AssociationSet>
+    <AssociationSet Name="fk_usuario_rol" Association="Self.fk_usuario_rol">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

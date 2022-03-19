@@ -1,4 +1,4 @@
-﻿function Filtrar() {
+﻿function Filtro() {
     var Property_idCategoria = $.trim($("#Property_idCategoria").val());
     var Property_provincia = $.trim($("#Property_provincia").val());
     var Property_canton = $.trim($("#Property_canton").val());
@@ -54,48 +54,28 @@
     } else {
         $.ajax({
             type: 'POST',
-            url: '/Home/Filtrar/',
+            url: '/Home/FiltrarPropiedad',
             data: {
-                idCategoria:Property_idCategoria,
-                provincia:Property_provincia,
-                canton:Property_canton,
-                pisos:Property_pisos,
-                habitacion:Property_habitacion,
-                baños:Property_ba_os,
-                garage:Property_garage,
-                min_price:min_price,
-                max_price:max_price
+                Property_idCategoria: Property_idCategoria,
+                Property_provincia: Property_provincia,
+                Property_canton: Property_canton,
+                Property_pisos: Property_pisos,
+                Property_habitacion: Property_habitacion,
+                Property_garage: Property_garage,
+                min_price: min_price,
+                Property_ba_os: Property_ba_os,
+                max_price: max_price,
             },
             dataType: 'json',
+            function(data) {
+                $("#CallProcess").html(data);
+            },
             success: function (data) {
-                Swal.fire({
-                    title: "NO",
-                    icon: 'error',
-                    width: '40%',
-                    padding: '2%',
-                    backdrop: 'true',
-                    timerProgressBar: false,
-                    allowOutsideClick: true,
-                    allowEscapeKey: false,
-                    allowEnterKey: false,
-                    stopKeydownPropagation: false
-                });
             },
             error: function (data) {
-                Swal.fire({
-                    title: "Error",
-                    icon: 'error',
-                    width: '40%',
-                    padding: '2%',
-                    backdrop: 'true',
-                    timerProgressBar: false,
-                    allowOutsideClick: true,
-                    allowEscapeKey: false,
-                    allowEnterKey: false,
-                    stopKeydownPropagation: false
-                });
             }
         });
+        window.location.reload(true);
     }
 
 }

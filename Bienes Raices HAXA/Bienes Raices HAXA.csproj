@@ -441,6 +441,7 @@
     <Content Include="Views\Perfil\Perfil.cshtml" />
     <Content Include="Views\Perfil\PerfilPartial.cshtml" />
     <Content Include="Views\Home\Filtrado.cshtml" />
+    <Content Include="Views\Home\FiltroDePropiedades.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
