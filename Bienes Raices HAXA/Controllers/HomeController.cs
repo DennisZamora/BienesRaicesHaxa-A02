@@ -14,6 +14,19 @@ namespace Bienes_Raices_HAXA.Controllers
         {
             try
             {
+                var categorias = action.CategoriasSeleccion();
+
+                List<SelectListItem> comboCat = new List<SelectListItem>();
+                foreach (var item in categorias)
+                {
+                    comboCat.Add(new SelectListItem
+                    {
+                        Value = item.idCategoria.ToString(),
+                        Text = item.nombre.ToString(),
+                    });
+                }
+                ViewBag.cat = comboCat;
+
                 var propiedades = action.ListarPropiedades();
                 Session["Propiedades"] = propiedades;
 
