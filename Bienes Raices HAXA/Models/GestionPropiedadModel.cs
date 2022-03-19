@@ -209,6 +209,39 @@ namespace Bienes_Raices_HAXA.Models
             }
         }
 
+        public List<PropiedadV> filtrarPropiedad(int idCategoria, string provincia, string canton, int? pisos, int? habitacion, int? baños, int? garage, int precioMin, int precioMax)
+        {
+            {
+                properties = new List<PropiedadV>();
+                using (var contexto = new BRHaxaEntities())
+                {
+                    var res = contexto;
+                    foreach (var item in res.Propiedad)
+                    {
+                        var imagenes = (from x in res.Imagenes
+                                        where x.idPropiedad == item.idPropiedad
+                                        select x).ToList();
+                        properties.Add(new PropiedadV
+                        {
+                            Property = item,
+                            Img = imagenes
+                        });
+                    }
+                }
+                var resultado = (from x in properties
+                                 where x.Property.Categoria.idCategoria == idCategoria
+                                 && x.Property.provincia == provincia
+                                 && x.Property.canton == canton
+                                 && x.Property.pisos >= pisos
+                                 && x.Property.habitacion >= habitacion
+                                 && x.Property.baños >= baños
+                                 && x.Property.garage >= garage
+                                 //&& (x.Property.precio > precioMin && x.Property.precio < precioMax)
+                                 select x).ToList();
+
+                return resultado;
+            }
+        }
         public List<Categoria> CategoriasSeleccion()
         {
             using (var contexto = new BRHaxaEntities())

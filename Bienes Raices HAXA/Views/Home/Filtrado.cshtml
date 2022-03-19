@@ -2,7 +2,7 @@
 
 <h3>Buscar propiedades</h3>
 
-<form>
+<div>
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <div class="form-group">
         @Html.Label("Categoria", htmlAttributes: new { @class = "control-label" })
@@ -76,5 +76,5 @@
         </div>
     </div>
 
-    <input type="submit" value="Consultar" class="form-control">
-</form>
+    <input type="submit" value="Consultar" onclick="Filtrar();" class="form-control">
+</div>

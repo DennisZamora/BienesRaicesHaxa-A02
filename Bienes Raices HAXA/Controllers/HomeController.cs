@@ -47,7 +47,7 @@ namespace Bienes_Raices_HAXA.Controllers
         }
 
         [HttpPost]
-        public ActionResult Filtrar(PropiedadV propiedad)
+        public ActionResult Filtrar(int idCategoria,string provincia,string canton,int? pisos,int? habitacion,int? baños,int? garage,int precioMin,int precioMax)
         {
             try
             {
@@ -64,7 +64,7 @@ namespace Bienes_Raices_HAXA.Controllers
                 }
                 ViewBag.cat = comboCat;
 
-                var propiedades = action.ListarPropiedades();
+                var propiedades = action.filtrarPropiedad(idCategoria, provincia, canton, pisos, habitacion, baños, garage, precioMin, precioMax);
                 Session["Propiedades"] = propiedades;
 
                 // Verificar si la lista esta vacía
@@ -77,7 +77,7 @@ namespace Bienes_Raices_HAXA.Controllers
                     return View("Index", new List<PropiedadV>());
                 }
             }
-            catch (Exception)
+            catch (Exception ee)
             {
                 return View("~/Shared/Error.cshtml");
             }
