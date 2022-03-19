@@ -240,6 +240,7 @@
       <DependentUpon>BRHaxaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GestionDuenosModel.cs" />
+    <Compile Include="Models\GestionEmpleadosModel.cs" />
     <Compile Include="Models\GestionPropiedadModel.cs" />
     <Compile Include="Models\GestionUsuariosModel.cs" />
     <Compile Include="Models\Imagenes.cs">
