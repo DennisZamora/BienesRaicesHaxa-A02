@@ -10,12 +10,70 @@ namespace Bienes_Raices_HAXA.Controllers
     {
         private GestionPropiedadModel action = new GestionPropiedadModel();
 
-        public ActionResult Index()
+        [HttpPost]
+        public ActionResult FiltrarPropiedad(string Property_idCategoria,string Property_provincia, string Property_canton,
+               int? Property_pisos,int? Property_habitacion, int? Property_garage,int min_price, int? Property_ba_os,int max_price)
         {
+            int idCategoria = Convert.ToInt32(Property_idCategoria);
+            int? pisos = (Property_pisos);
+            int? habitacion = (Property_habitacion);
+            int? baños = (Property_ba_os);
+            int? garage = (Property_garage); 
+            int precioMin = (min_price);
+            int precioMax = (max_price);
+
             try
             {
+                var propiedades = new List<PropiedadV>();
+                propiedades = action.filtrarPropiedad(idCategoria, Property_provincia, Property_canton, pisos, habitacion, baños, garage, precioMin, precioMax);
+                var categorias = action.CategoriasSeleccion();
+
+                List<SelectListItem> comboCat = new List<SelectListItem>();
+                foreach (var item in categorias)
+                {
+                    comboCat.Add(new SelectListItem
+                    {
+                        Value = item.idCategoria.ToString(),
+                        Text = item.nombre.ToString(),
+                    });
+                }
+                ViewBag.cat = comboCat;
+                // Verificar si la lista esta vacía
+                if (propiedades.Count > 0)
+                {
+                    return View("Index", propiedades);
+                }
+                else
+                {
+                    return View("Index", new List<PropiedadV>());
+                }
+            }
+            catch (Exception ee)
+            {
+                return View("~/Shared/Error.cshtml");
+            }
+        }
+
+        [HttpGet]
+        public ActionResult Index()
+        {
+
+            try
+            {
+                var categorias = action.CategoriasSeleccion();
+
+                List<SelectListItem> comboCat = new List<SelectListItem>();
+                foreach (var item in categorias)
+                {
+                    comboCat.Add(new SelectListItem
+                    {
+                        Value = item.idCategoria.ToString(),
+                        Text = item.nombre.ToString(),
+                    });
+                }
+                ViewBag.cat = comboCat;
+
                 var propiedades = action.ListarPropiedades();
-                Session["Propiedades"] = propiedades;
 
                 // Verificar si la lista esta vacía
                 if (propiedades.Count > 0)
@@ -33,12 +91,14 @@ namespace Bienes_Raices_HAXA.Controllers
             }
         }
 
+       
+
         [HttpGet]
         public ActionResult Propiedad(long id)
         {
             try
             {
-                var propiedad = action.getPropiedad(id, (List<PropiedadV>)Session["Propiedades"]);
+                var propiedad = action.getPropiedad(id);
                 if (propiedad == null)
                 {
                     return View("Error");

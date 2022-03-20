@@ -3,35 +3,37 @@
     ViewBag.Title = "GestionEmpleados";
 }
 
-@Styles.Render("~/Content/Format.css")
+@Styles.Render("~/Content/table.css")
 
-<h2>Gestion de Empleados</h2>
+<h2>Gestion Empleados</h2>
 
-<table class="table">
+<a href="@Url.Action("RegistrarEmpleados","GestionEmpleados")" class="w3-bar-item w3-button">Registrar un nuevo empleado</a>
+
+<table class="table-fill">
     <thead>
-    <th>ID</th>
-    <th>Cedula</th>
+    <th>Cédula</th>
     <th>Nombre</th>
     <th>Primer Apellido</th>
     <th>Segundo Apellido</th>
+    <th>Teléfono</th>
     <th>Correo</th>
-    <th>Contraseña</th>
+    <th></th>
+    <th></th>
     </thead>
 
-    <tbody>
+    <tbody id="BusquedaDatos" class="table-hover">
         @foreach (var item in Model)
         {
-        <tr>
-            <td>@item.idUsuario</td>
-            <td>@item.cedula_identificacion</td>
-            <td>@item.nombre</td>
-            <td>@item.apellido1 </td>
-            <td>@item.apellido2</td>
-            <td>@item.email</td>
-            <td>@item.password</td>
-            <td>@Html.ActionLink("Actualizar", "ActualizarEmpleado", new { identificacion = @item.cedula_identificacion})</td>
-            <td>@Html.ActionLink("Eliminar", "EliminarEmpleado", new { identificacion = @item.cedula_identificacion })</td>
-        </tr>
+            <tr>
+                <td>@item.cedula_identificacion</td>
+                <td>@item.nombre</td>
+                <td>@item.apellido1 </td>
+                <td>@item.apellido2</td>
+                <td>@item.telefono</td>
+                <td>@item.email</td>
+                <td>@Html.ActionLink("Actualizar", "ActualizarEmpleados", new { identificacion = @item.cedula_identificacion })</td>
+                <td>@Html.ActionLink("Eliminar", "EliminarEmpleados", new { identificacion = @item.cedula_identificacion })</td>
+            </tr>
 
         }
     </tbody>
