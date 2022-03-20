@@ -441,7 +441,6 @@
     <Content Include="Views\Perfil\Perfil.cshtml" />
     <Content Include="Views\Perfil\PerfilPartial.cshtml" />
     <Content Include="Views\Home\Filtrado.cshtml" />
-    <Content Include="Views\Home\FiltrarPropiedad.cshtml" />
     <Content Include="Views\Home\Propiedades.cshtml" />
   </ItemGroup>
   <ItemGroup>

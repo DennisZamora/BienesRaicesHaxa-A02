@@ -1,5 +1,9 @@
 ﻿@model IEnumerable<Bienes_Raices_HAXA.Models.PropiedadV>
 
+@if(Model.Count() == 0)
+            {
+<h3 class="w3-border-bottom w3-border-light-grey" style="text-align:center;">No se han encontrado propiedades</h3>
+            }
     @foreach (var item in Model)
     {
         <div id="dprop" class="boost-pfs-filter-product-item boost-pfs-filter-product-item-grid boost-pfs-filter-grid-width-3 boost-pfs-filter-grid-width-mb-1 has-bc-swap-image" data-id="6582722756704" data-page="1">
@@ -75,7 +79,7 @@
                         <p class="boost-pfs-filter-product-item-price">
                             <!--if descuento--> <!--<s><span class="money">₡381,900</span></s>--> <!--if descuento-->
                             <span class="boost-pfs-filter-product-item-sale-price">
-                                <span class="money">@item.Property.precio</span>
+                                <span class="money">$@item.Property.precio</span>
                             </span>
                         </p>
                     </a>
