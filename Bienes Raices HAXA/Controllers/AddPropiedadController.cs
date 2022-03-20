@@ -78,7 +78,7 @@ namespace Bienes_Raices_HAXA.Controllers
 
             try
             {
-                var propiedad = pm.getPropiedad(id, new List<PropiedadV>()).Property;
+                var propiedad = pm.getPropiedad(id).Property;
                 var categorias = pm.CategoriasSeleccion();
 
                 List<SelectListItem> comboCat = new List<SelectListItem>();

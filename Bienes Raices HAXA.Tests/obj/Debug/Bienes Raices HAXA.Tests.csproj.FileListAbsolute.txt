@@ -297,3 +297,112 @@ D:\Universidad\Vll\DiseñoDesarrolloSistemas\Analis2-Git-Proyecto\Analisis2-Desa
 D:\Universidad\Vll\DiseñoDesarrolloSistemas\Analis2-Git-Proyecto\Analisis2-Desarrollo\Bienes Raices HAXA.Tests\obj\Debug\Bienes Raices HAXA.Tests.csproj.CopyComplete
 D:\Universidad\Vll\DiseñoDesarrolloSistemas\Analis2-Git-Proyecto\Analisis2-Desarrollo\Bienes Raices HAXA.Tests\obj\Debug\Bienes Raices HAXA.Tests.dll
 D:\Universidad\Vll\DiseñoDesarrolloSistemas\Analis2-Git-Proyecto\Analisis2-Desarrollo\Bienes Raices HAXA.Tests\obj\Debug\Bienes Raices HAXA.Tests.pdb
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\Microsoft.TestPlatform.AdapterUtilities.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Bienes Raices HAXA.Tests.dll.config
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Bienes Raices HAXA.Tests.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Bienes Raices HAXA.Tests.pdb
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\csc.exe
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\csc.exe.config
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\csc.rsp
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\csi.exe
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\csi.exe.config
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\csi.rsp
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\Microsoft.Managed.Core.targets
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\System.Buffers.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\System.Memory.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\System.Numerics.Vectors.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\vbc.exe
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\vbc.exe.config
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\vbc.rsp
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Bienes Raices HAXA.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\CloudinaryDotNet.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\EntityFramework.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.Extensions.WebEncoders.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\System.CodeDom.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Rotativa.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\WebGrease.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Antlr3.Runtime.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Bienes Raices HAXA.pdb
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Bienes Raices HAXA.dll.config
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\CloudinaryDotNet.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\EntityFramework.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.AspNetCore.Html.Abstractions.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.Extensions.WebEncoders.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\System.CodeDom.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Antlr3.Runtime.pdb
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\System.Web.Helpers.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\System.Web.Mvc.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\System.Web.Razor.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\System.Web.WebPages.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\System.Web.Optimization.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\obj\Debug\Bienes Raices HAXA.Tests.csproj.AssemblyReference.cache
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\obj\Debug\Bienes Raices HAXA.Tests.csproj.CoreCompileInputs.cache
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\obj\Debug\Bienes Raices HAXA.Tests.csproj.CopyComplete
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\obj\Debug\Bienes Raices HAXA.Tests.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\obj\Debug\Bienes Raices HAXA.Tests.pdb

@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\oscar\Documents\BRHaxa\haxa-main-haxa-rep-15a6cdf6150e\Bienes Raices HAXA\Models\BRHaxaModel.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\Models\BRHaxaModel.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.
