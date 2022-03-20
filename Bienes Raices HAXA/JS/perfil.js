@@ -12,6 +12,7 @@
     var espacios = false;
     var cont = 0;
     var validarCorreo = false;
+
     while (!espacios && (cont < contrasena.length)) {
         if (contrasena.charAt(cont) == " ") {
             espacios = true;
@@ -26,7 +27,6 @@
         }
         cont++;
     }
-
 
     if (cedula_identificacion == "" || nombre == "" || primerApellido == "" || segundoApellido == "" ||
         telefono == "" || contrasena == "" || correo == "") {
@@ -46,7 +46,7 @@
     } else if (contrasena.length < 5 || espacios) {
         Swal.fire({
             title: "Contraseña muy debil",
-            text: "Ingrese una contraseña correcta: Contenga un minimo de 6 caracteres, ningun espacio en blanco",
+            text: "Ingrese una contraseña correcta: Contenga un mínimo de 6 caracteres, ningún espacio en blancoo",
             icon: 'error',
             width: '40%',
             padding: '2%',
@@ -57,10 +57,25 @@
             allowEnterKey: false,
             stopKeydownPropagation: false
         });
+    } else if (telefono.length != 8) {
+        Swal.fire({
+            title: "Número telefónico incorrecto",
+            text: "Ingrese un número telefónico correcto con una longitud de 8 caracteres",
+            icon: 'error',
+            width: '40%',
+            padding: '2%',
+            backdrop: 'true',
+            timerProgressBar: false,
+            allowOutsideClick: true,
+            allowEscapeKey: false,
+            allowEnterKey: false,
+            stopKeydownPropagation: false
+        });
+
     } else if (validarCorreo == false) {
         Swal.fire({
-            title: "Correo electronico incorrecto",
-            text: "Ingrese un correo electronico correcto",
+            title: "Correo electrónico incorrecto",
+            text: "Ingrese un correo electrónico correcto",
             icon: 'error',
             width: '40%',
             padding: '2%',
@@ -89,7 +104,7 @@
             dataType: 'json',
             success: function (respuesta) {
                 Swal.fire({
-                    title: "Perfil editado con exito",
+                    title: "Perfil editado con éxito",
                     icon: 'success',
                     width: '40%',
                     padding: '2%',
@@ -103,7 +118,7 @@
             },
             error: function (respuesta) {
                 Swal.fire({
-                    title: "Perfil editado con exito",
+                    title: "Perfil editado con éxito",
                     icon: 'success',
                     width: '40%',
                     padding: '2%',

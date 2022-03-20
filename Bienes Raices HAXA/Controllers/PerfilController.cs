@@ -28,7 +28,7 @@ namespace Bienes_Raices_HAXA.Controllers
             var respuesta = modelo.editarPerfil(usuario,primerApellido,segundoApellido,contrasena,correo);
             if (respuesta == true)
             {
-                return RedirectToAction("Index", "Home");
+                return View("Perfil");
             } else
             {
                 return View("Perfil");
