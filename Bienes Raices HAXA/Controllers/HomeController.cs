@@ -8,12 +8,12 @@ namespace Bienes_Raices_HAXA.Controllers
 {
     public class HomeController : Controller
     {
-        private GestionPropiedadModel action = new GestionPropiedadModel();
 
         [HttpPost]
         public ActionResult FiltrarPropiedad(string Property_idCategoria,string Property_provincia, string Property_canton,
                int? Property_pisos,int? Property_habitacion, int? Property_garage,int min_price, int? Property_ba_os,int max_price)
         {
+            GestionPropiedadModel action = new GestionPropiedadModel();
             int idCategoria = Convert.ToInt32(Property_idCategoria);
             int? pisos = (Property_pisos);
             int? habitacion = (Property_habitacion);
@@ -24,8 +24,6 @@ namespace Bienes_Raices_HAXA.Controllers
 
             try
             {
-                var propiedades = new List<PropiedadV>();
-                propiedades = action.filtrarPropiedad(idCategoria, Property_provincia, Property_canton, pisos, habitacion, baños, garage, precioMin, precioMax);
                 var categorias = action.CategoriasSeleccion();
 
                 List<SelectListItem> comboCat = new List<SelectListItem>();
@@ -38,15 +36,18 @@ namespace Bienes_Raices_HAXA.Controllers
                     });
                 }
                 ViewBag.cat = comboCat;
-                // Verificar si la lista esta vacía
-                if (propiedades.Count > 0)
-                {
-                    return View("Index", propiedades);
-                }
-                else
-                {
-                    return View("Index", new List<PropiedadV>());
-                }
+                    var propiedades = new List<PropiedadV>();
+                    propiedades = action.filtrarPropiedad(idCategoria, Property_provincia, Property_canton, pisos, habitacion, baños, garage, precioMin, precioMax);
+
+                    // Verificar si la lista esta vacía
+                    if (propiedades.Count > 0)
+                    {
+                        return PartialView("Propiedades",propiedades);
+                    }
+                    else
+                    {
+                        return PartialView("Propiedades", new List<PropiedadV>());
+                    }
             }
             catch (Exception ee)
             {
@@ -57,7 +58,7 @@ namespace Bienes_Raices_HAXA.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-
+            GestionPropiedadModel action = new GestionPropiedadModel();
             try
             {
                 var categorias = action.CategoriasSeleccion();
@@ -72,7 +73,6 @@ namespace Bienes_Raices_HAXA.Controllers
                     });
                 }
                 ViewBag.cat = comboCat;
-
                 var propiedades = action.ListarPropiedades();
 
                 // Verificar si la lista esta vacía
@@ -96,6 +96,7 @@ namespace Bienes_Raices_HAXA.Controllers
         [HttpGet]
         public ActionResult Propiedad(long id)
         {
+            GestionPropiedadModel action = new GestionPropiedadModel();
             try
             {
                 var propiedad = action.getPropiedad(id);

@@ -67,15 +67,27 @@
                 max_price: max_price,
             },
             dataType: 'json',
-            function(data) {
-                $("#CallProcess").html(data);
-            },
             success: function (data) {
+                document.getElementById("prop").innerHTML = "";
+                $('#prop').append(data);
+                Swal.close();
             },
             error: function (data) {
+                document.getElementById("prop").innerHTML = "";
+                $('#prop').append(data.responseText);
+                //Swal.fire({
+                //    title: "Error al buscar",
+                //    icon: 'error',
+                //    width: '40%',
+                //    padding: '2%',
+                //    backdrop: 'true',
+                //    timerProgressBar: false,
+                //    allowOutsideClick: true,
+                //    allowEscapeKey: false,
+                //    allowEnterKey: false,
+                //    stopKeydownPropagation: false
+                //});
             }
         });
-        window.location.reload(true);
     }
-
 }
