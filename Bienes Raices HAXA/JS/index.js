@@ -12,7 +12,7 @@
     if (min_price < 0) {
         Swal.fire({
             title: "Error",
-            text: "El precio minimo no debe ser menor a 0",
+            text: "El precio mínimo no debe ser menor a 0",
             icon: 'error',
             width: '40%',
             padding: '2%',
@@ -40,7 +40,7 @@
     } else if (Property_idCategoria == "") {
         Swal.fire({
             title: "Error",
-            text: "La categoria no puede estar en blanco",
+            text: "La categoría no puede estar en blanco",
             icon: 'error',
             width: '40%',
             padding: '2%',
@@ -49,9 +49,24 @@
             allowOutsideClick: true,
             allowEscapeKey: false,
             allowEnterKey: false,
-            stopKeydownPropagation: false
+            stopKeydownPropagation: false 
         });
+    } else if (Property_pisos < 0 || Property_pisos > 10 || Property_habitacion < 0 || Property_habitacion > 10 || Property_ba_os < 0 || Property_ba_os > 10 || Property_garage < 0 || Property_garage > 10) {
+    Swal.fire({
+        title: "Error",
+        text: "El valor mínimo de las características es 0 y el máximo es 10, también puede dejar este en blanco",
+        icon: 'error',
+        width: '40%',
+        padding: '2%',
+        backdrop: 'true',
+        timerProgressBar: false,
+        allowOutsideClick: true,
+        allowEscapeKey: false,
+        allowEnterKey: false,
+        stopKeydownPropagation: false
+    });
     } else {
+        Swal.showLoading();
         $.ajax({
             type: 'POST',
             url: '/Home/FiltrarPropiedad',
@@ -67,15 +82,28 @@
                 max_price: max_price,
             },
             dataType: 'json',
-            function(data) {
-                $("#CallProcess").html(data);
-            },
             success: function (data) {
+                document.getElementById("prop").innerHTML = "";
+                $('#prop').append(data);
+                Swal.close();
             },
             error: function (data) {
+                document.getElementById("prop").innerHTML = "";
+                $('#prop').append(data.responseText);
+                Swal.close();
+                //Swal.fire({
+                //    title: "Error al buscar",
+                //    icon: 'error',
+                //    width: '40%',
+                //    padding: '2%',
+                //    backdrop: 'true',
+                //    timerProgressBar: false,
+                //    allowOutsideClick: true,
+                //    allowEscapeKey: false,
+                //    allowEnterKey: false,
+                //    stopKeydownPropagation: false
+                //});
             }
         });
-        window.location.reload(true);
     }
-
 }

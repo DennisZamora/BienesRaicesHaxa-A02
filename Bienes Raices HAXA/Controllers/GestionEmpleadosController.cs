@@ -19,7 +19,7 @@ namespace Bienes_Raices_HAXA.Controllers
         }
 
 
-        public ActionResult EliminarEmpleados(string identificacion)
+        public ActionResult EliminarEmpleado(string identificacion)
         {
             GestionEmpleadosModel model = new GestionEmpleadosModel();
 
@@ -44,7 +44,7 @@ namespace Bienes_Raices_HAXA.Controllers
             return RedirectToAction("GestionEmpleados", "GestionEmpleados");
         }
 
-        public ActionResult ActualizarEmpleados(string identificacion)
+        public ActionResult ActualizarEmpleado(string identificacion)
         {
             GestionEmpleadosModel model = new GestionEmpleadosModel();
 

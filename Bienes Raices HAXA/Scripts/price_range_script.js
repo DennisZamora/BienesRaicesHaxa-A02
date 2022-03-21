@@ -49,9 +49,9 @@ $(document).ready(function(){
 		range: true,
 		orientation: "horizontal",
 		min: 0,
-		  max: 200000000,
-		  values: [0, 200000000],
-		step: 50000,
+		  max: 2000000,
+		  values: [0, 2000000],
+		step: 500,
 
 		slide: function (event, ui) {
 		  if (ui.values[0] == ui.values[1]) {
