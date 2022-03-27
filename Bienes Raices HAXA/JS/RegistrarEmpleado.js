@@ -1,6 +1,4 @@
-﻿function actualizarEmpleado() {
-    var idUsuario = $.trim($("#idUsuario").val());
-    var idRol = $.trim($("#idRol").val());
+﻿function registrarEmpleado() {
     var cedula_identificacion = $.trim($("#cedula_identificacion").val());
     var nombre = $.trim($("#nombre").val());
     var primerApellido = $.trim($("#apellido1").val());
@@ -32,7 +30,7 @@
     if (cedula_identificacion == "" || nombre == "" || primerApellido == "" || segundoApellido == "" ||
         telefono == "" || password == "" || correo == "") {
         Swal.fire({
-            title: "Error al actualizar el Empleado",
+            title: "Error al registrar el Empleado",
             text: "Se encuentran datos en blanco",
             icon: 'error',
             width: '40%',
@@ -90,9 +88,8 @@
     } else {
         $.ajax({
             type: 'POST',
-            url: '/GestionEmpleados/Actualizar',
+            url: '/GestionEmpleados/Registrar',
             data: {
-                idUsuario: idUsuario,
                 cedula_identificacion: cedula_identificacion,
                 nombre: nombre,
                 primerApellido: primerApellido,
@@ -100,12 +97,11 @@
                 telefono: telefono,
                 password: password,
                 correo: correo,
-                idRol: idRol,
             },
             dataType: 'json',
             success: function (respuesta) {
                 Swal.fire({
-                    title: "Empleado actualizado con éxito",
+                    title: "Empleado registrado con éxito",
                     icon: 'success',
                     width: '40%',
                     padding: '2%',
@@ -119,7 +115,7 @@
             },
             error: function (respuesta) {
                 Swal.fire({
-                    title: "Empleado actualizado con éxito",
+                    title: "Empleado registrado con éxito",
                     icon: 'success',
                     width: '40%',
                     padding: '2%',

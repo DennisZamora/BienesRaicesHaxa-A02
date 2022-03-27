@@ -49,22 +49,22 @@ namespace Bienes_Raices_HAXA.Models
         }
 
         //metodo para actualizar el empoleado
-        public void actualizaEmpleado(Usuario duenoSeleccionado)
+        public void actualizaEmpleado(Usuario empleado, string primerApellido, string segundoApellido, string password, string correo)
         {
             using (var contexto = new BRHaxaEntities())
             {
                 var dueno = (from x in contexto.Usuario
-                             where x.idUsuario == duenoSeleccionado.idUsuario
+                             where x.idUsuario == empleado.idUsuario
                              select x).FirstOrDefault();
 
-                dueno.cedula_identificacion = duenoSeleccionado.cedula_identificacion;
-                dueno.nombre = duenoSeleccionado.nombre;
-                dueno.apellido1 = duenoSeleccionado.apellido1;
-                dueno.apellido2 = duenoSeleccionado.apellido2;
-                dueno.telefono = duenoSeleccionado.telefono;
-                dueno.email = duenoSeleccionado.email;
-                dueno.password = duenoSeleccionado.password;
-                dueno.idRol = dueno.idRol;
+                dueno.cedula_identificacion = empleado.cedula_identificacion;
+                dueno.nombre = empleado.nombre;
+                dueno.apellido1 = primerApellido;
+                dueno.apellido2 = segundoApellido;
+                dueno.telefono = empleado.telefono;
+                dueno.email = correo;
+                dueno.password = password;
+                dueno.idRol = empleado.idRol;
 
                 contexto.SaveChanges();
             }
@@ -84,7 +84,7 @@ namespace Bienes_Raices_HAXA.Models
             }
         }
 
-        public void registrarEmpleado(Usuario empleado)
+        public void registrarEmpleado(Usuario empleado, string primerApellido, string segundoApellido, string password, string correo)
         {
             using (BRHaxaEntities db = new BRHaxaEntities())
             {
@@ -97,11 +97,11 @@ namespace Bienes_Raices_HAXA.Models
 
                         usuario.cedula_identificacion = empleado.cedula_identificacion;
                         usuario.nombre = empleado.nombre;
-                        usuario.apellido1 = empleado.apellido1;
-                        usuario.apellido2 = empleado.apellido2;
+                        usuario.apellido1 = primerApellido;
+                        usuario.apellido2 = segundoApellido;
                         usuario.telefono = empleado.telefono;
-                        usuario.email = empleado.email;
-                        usuario.password = empleado.password;
+                        usuario.email = correo;
+                        usuario.password = password;
                         usuario.idRol = 2;
 
                         db.Usuario.Add(usuario);

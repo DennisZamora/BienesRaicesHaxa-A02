@@ -9,6 +9,15 @@ namespace Bienes_Raices_HAXA.Controllers
 {
     public class GestionEmpleadosController : Controller
     {
+        [HttpPost]
+        public ActionResult Actualizar(Usuario empleado, string primerApellido, string segundoApellido, string password, string correo)
+        {
+            GestionEmpleadosModel model = new GestionEmpleadosModel();
+            model.actualizaEmpleado(empleado, primerApellido, segundoApellido, password, correo);
+
+            return RedirectToAction("GestionEmpleados", "GestionEmpleados");
+        }
+
         public ActionResult GestionEmpleados()
         {
             GestionEmpleadosModel model = new GestionEmpleadosModel();
@@ -61,24 +70,18 @@ namespace Bienes_Raices_HAXA.Controllers
             }
         }
 
-        public ActionResult Actualizar(Usuario empleado)
-        {
-            GestionEmpleadosModel model = new GestionEmpleadosModel();
-            model.actualizaEmpleado(empleado);
-
-            return RedirectToAction("GestionEmpleados", "GestionEmpleados");
-        }
+        
 
         public ActionResult RegistrarEmpleados()
         {
             return View();
         }
 
-        public ActionResult Registrar(Usuario empleado)
+        public ActionResult Registrar(Usuario empleado, string primerApellido, string segundoApellido, string password, string correo)
         {
             GestionEmpleadosModel model = new GestionEmpleadosModel();
 
-            model.registrarEmpleado(empleado);
+            model.registrarEmpleado(empleado, primerApellido, segundoApellido, password, correo);
 
             return RedirectToAction("GestionEmpleados", "GestionEmpleados");
         }

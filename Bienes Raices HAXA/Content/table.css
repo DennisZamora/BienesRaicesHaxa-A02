@@ -41,8 +41,7 @@ tr {
 }
 
 	tr:hover td {
-		background-color: #4e5066;
-		color: #fff;
+		color: #000;
 		border-top: 1px solid #22262e;
 	}
 

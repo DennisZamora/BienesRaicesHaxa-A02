@@ -9,15 +9,15 @@
 
 @Styles.Render("~/Content/RegistroUsuario.css")
 
-<h2>Actualizar Dueño</h2>
+<h2>Actualizar Empleado</h2>
 <div class="login-block">
-    @using (Html.BeginForm("Actualizar", "GestionEmpleados", FormMethod.Post))
-    {
+
         <div class="singin">
             <div class="central">
                 <div class="caja1">
                     <div class="form-group">
-                        @Html.TextBox("idUsuario", empleado.idUsuario, new { placeholder = empleado.idUsuario, @hidden = true })
+                        @Html.TextBox("idUsuario", empleado.idUsuario, new {  @hidden = true })
+                        @Html.TextBox("idRol",empleado.idRol, new { @hidden = true })
                         <br />
 
                         @Html.Label("lblCedula_identificacion", "Cédula", new { @class = "form-label" })
@@ -61,23 +61,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <button id="boton" value="Actualizar" class="button" type="submit">Actualizar</button>
+                <button value="actualizar" id="actualizar" style="width:200px" onclick="actualizarEmpleado();" class="button" type="submit">Actualizar</button>
             </div>
         </div>
-    }
+    
 </div>
-
-<script src="~/Scripts/jquery-3.4.1.min.js"></script>
-
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-<script>
-    $('#boton').on('click', function () {
-        Swal.fire({
-            icon: 'success',
-            title: 'Dueño actualizado!',
-            showConfirmButton: false,
-            timer: 3000
-        });
-    })
-</script>
