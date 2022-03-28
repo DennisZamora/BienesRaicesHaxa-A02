@@ -21,7 +21,7 @@
     <WebStackScaffolding_ControllerDialogWidth>600</WebStackScaffolding_ControllerDialogWidth>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_DbContextTypeFullName>Bienes_Raices_HAXA.Models.BRHaxaEntities</WebStackScaffolding_DbContextTypeFullName>
-    <NameOfLastUsedPublishProfile>C:\Users\oscar\Documents\BRHaxa\haxa-main-haxa-rep-15a6cdf6150e\Bienes Raices HAXA\Properties\PublishProfiles\BienesRaicesHAXA20220307 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\Properties\PublishProfiles\BienesRaicesHAXA - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Subir Imagenes";
+}
+
+<h2>SubirImagenes</h2>
+
+<body id="myId">
+
+    @Html.Label("lblimagen", "Inserte imagen")
+    @using (Html.BeginForm("SubirImg", "AddPropiedad", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+    @Html.Label("lblidPropiedad", "ID de la proopiedad")<br />
+    @Html.TextBox("idPropiedad", ViewBag.items as String, new { @class = "form-control", ReadOnly = true })
+
+    <div class="form-group">
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Default file input example</label>
+            @Html.TextBox("UpImage","",new {type="file", @class = "form-control" })
+        </div>
+    </div>
+    <button type="submit">Subir archivo</button>
+    }
+</body>
