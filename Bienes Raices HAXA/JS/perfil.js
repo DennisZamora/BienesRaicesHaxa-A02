@@ -46,7 +46,7 @@
     } else if (contrasena.length < 5 || espacios) {
         Swal.fire({
             title: "Contraseña muy debil",
-            text: "Ingrese una contraseña correcta: Contenga un mínimo de 6 caracteres, ningún espacio en blancoo",
+            text: "Ingrese una contraseña correcta: Contenga un mínimo de 6 caracteres, ningún espacio en blanco",
             icon: 'error',
             width: '40%',
             padding: '2%',
