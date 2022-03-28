@@ -1,9 +1,6 @@
 ﻿using Bienes_Raices_HAXA.Filters;
 using Bienes_Raices_HAXA.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Bienes_Raices_HAXA.Controllers
@@ -22,14 +19,15 @@ namespace Bienes_Raices_HAXA.Controllers
             return View(respuesta);
         }
         [HttpPost]
-        public ActionResult EditarPerfil(Usuario usuario,string primerApellido,string segundoApellido,string contrasena,string correo)
+        public ActionResult EditarPerfil(Usuario usuario, string primerApellido, string segundoApellido, string contrasena, string correo)
         {
             PerfilModel modelo = new PerfilModel();
-            var respuesta = modelo.editarPerfil(usuario,primerApellido,segundoApellido,contrasena,correo);
+            var respuesta = modelo.editarPerfil(usuario, primerApellido, segundoApellido, contrasena, correo);
             if (respuesta == true)
             {
                 return View("Perfil");
-            } else
+            }
+            else
             {
                 return View("Perfil");
             }

@@ -2,7 +2,6 @@
 using Bienes_Raices_HAXA.Models;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Web;
 using System.Web.Mvc;
 
@@ -148,13 +147,13 @@ namespace Bienes_Raices_HAXA.Controllers
             GestionPropiedadModel img = new GestionPropiedadModel();
             try
             {
-                
-                    //var imagen = Path.GetFileName(UpImage.FileName);
-                    //string logoPath = Server.MapPath("~/Content/Uploads/");
-                    //string archivo = idPropiedad + (DateTime.Now.ToString("yyyyMMddHHmmss") + "-" + imagen).ToLower();
-                    //img.agregarImagen(logoPath + archivo, idPropiedad);
-                    //UpImage.SaveAs(logoPath + archivo);
-                
+
+                //var imagen = Path.GetFileName(UpImage.FileName);
+                //string logoPath = Server.MapPath("~/Content/Uploads/");
+                //string archivo = idPropiedad + (DateTime.Now.ToString("yyyyMMddHHmmss") + "-" + imagen).ToLower();
+                //img.agregarImagen(logoPath + archivo, idPropiedad);
+                //UpImage.SaveAs(logoPath + archivo);
+
                 return RedirectToAction("Propiedades");
             }
             catch (Exception e)

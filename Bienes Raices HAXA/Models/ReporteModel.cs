@@ -1,8 +1,5 @@
-﻿using Bienes_Raices_HAXA.Models;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace Bienes_Raices_HAXA.Models
 {
@@ -10,13 +7,13 @@ namespace Bienes_Raices_HAXA.Models
     {
         public List<Propiedad> obtenerPropiedad()
         {
-            using(var contexto = new BRHaxaEntities())
+            using (var contexto = new BRHaxaEntities())
             {
                 var lista = (from x in contexto.Propiedad
                              orderby x.idPropiedad ascending
                              select x).ToList();
 
-                if(lista.Count > 0)
+                if (lista.Count > 0)
                 {
                     return lista;
                 }
@@ -99,35 +96,35 @@ namespace Bienes_Raices_HAXA.Models
                 return lista;
             }
         }
-      //public List<Categoria> categoria()
-      //  {
-      //      using (var contexto = new BRHaxaEntities())
-      //      {
-      //          var lista = (from x in contexto.Categoria
+        //public List<Categoria> categoria()
+        //  {
+        //      using (var contexto = new BRHaxaEntities())
+        //      {
+        //          var lista = (from x in contexto.Categoria
 
-      //                       select x).ToList();
-      //          var lisc = (from x in contexto.Categoria
-      //                      select x).ToList();
+        //                       select x).ToList();
+        //          var lisc = (from x in contexto.Categoria
+        //                      select x).ToList();
 
-      //          foreach(var item in lista)
-      //          {
-      //              foreach (var item2 in lisc)
-      //              {
-      //                 // item.Categoria.nombre = item2.nombre;
-      //                  //item.Categoria.idCategoria = item2.idCategoria;
-      //              }
-                    
-      //          }
+        //          foreach(var item in lista)
+        //          {
+        //              foreach (var item2 in lisc)
+        //              {
+        //                 // item.Categoria.nombre = item2.nombre;
+        //                  //item.Categoria.idCategoria = item2.idCategoria;
+        //              }
 
-      //          if(lista.Count > 0)
-      //          {
-      //              return lista;
-      //          }
-      //          else
-      //          {
-      //              return new List<Propiedad>();
-      //          }
-      //      }
-      //  }
+        //          }
+
+        //          if(lista.Count > 0)
+        //          {
+        //              return lista;
+        //          }
+        //          else
+        //          {
+        //              return new List<Propiedad>();
+        //          }
+        //      }
+        //  }
     }
 }

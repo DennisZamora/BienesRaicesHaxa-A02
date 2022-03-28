@@ -84,14 +84,14 @@ namespace Bienes_Raices_HAXA.Controllers
             return View(respuesta);
         }
 
-        public void generarPDFCitas(object sender, EventArgs e)
+        public ActionResult generarPDFCitas(object sender, EventArgs e)
         {
             try
             {
                 ReporteModel modelo = new ReporteModel();
                 List<Citas> listaCitas = modelo.obtenerCitas();
 
-                FileStream fs = new FileStream(Server.MapPath("~/Content/")+"ReporteCitas.pdf", FileMode.Create);
+                FileStream fs = new FileStream(Server.MapPath("~/Content/") + "ReporteCitas.pdf", FileMode.Create);
                 Document doc = new Document(PageSize.LETTER, 5, 5, 7, 7);
                 PdfWriter pw = PdfWriter.GetInstance(doc, fs);
 
@@ -249,8 +249,8 @@ namespace Bienes_Raices_HAXA.Controllers
                 doc.Add(tbl);
                 doc.Close();
                 pw.Close();
-                
-                RedirectToAction("ReporteCitas").ExecuteResult(this.ControllerContext);
+
+                return Redirect(@"https://bienesraiceshaxa.azurewebsites.net/Content/ReporteCitas.pdf");
 
             }
             catch (Exception ee)
@@ -261,7 +261,8 @@ namespace Bienes_Raices_HAXA.Controllers
 
         }
 
-        public void generarPDFPropiedad(object sender, EventArgs e)
+
+        public ActionResult generarPDFPropiedad(object sender, EventArgs e)
         {
             try
             {
@@ -566,7 +567,7 @@ namespace Bienes_Raices_HAXA.Controllers
                 doc.Add(tbl);
                 doc.Close();
                 pw.Close();
-                RedirectToAction("Reporte").ExecuteResult(this.ControllerContext);
+                return Redirect(@"https://bienesraiceshaxa.azurewebsites.net/Content/ReportePropiedades.pdf");
 
             }
             catch (Exception ee)
