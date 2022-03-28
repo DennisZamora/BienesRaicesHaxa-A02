@@ -282,6 +282,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\css.css" />
     <Content Include="Content\d3-Style.css" />
     <Content Include="Content\estilos.css" />
     <Content Include="Content\Format.css" />
@@ -316,9 +317,12 @@
     <Content Include="Functions\AddPropiedad.js" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="JS\ActualizarEmpleados.js" />
     <Content Include="JS\AgregarCita.js" />
+    <Content Include="JS\EliminarEmpleado.js" />
     <Content Include="JS\index.js" />
     <Content Include="JS\perfil.js" />
+    <Content Include="JS\RegistrarEmpleado.js" />
     <Content Include="lib\limonte-sweetalert2\sweetalert2.all.js" />
     <Content Include="lib\limonte-sweetalert2\sweetalert2.all.min.js" />
     <Content Include="lib\limonte-sweetalert2\sweetalert2.css" />
@@ -373,6 +377,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Calendario.js" />
+    <Content Include="Scripts\css.css" />
     <Content Include="Scripts\DataPickerReady.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -442,6 +447,8 @@
     <Content Include="Views\Perfil\PerfilPartial.cshtml" />
     <Content Include="Views\Home\Filtrado.cshtml" />
     <Content Include="Views\Home\Propiedades.cshtml" />
+    <Content Include="Views\Reporte\ReporteCitas.cshtml" />
+    <Content Include="Views\GestionEmpleados\RegistrarEmpleados.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

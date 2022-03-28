@@ -1,5 +1,13 @@
-C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\obj\Debug\Bienes Raices HAXA.Tests.csproj.AssemblyReference.cache
-C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\obj\Debug\Bienes Raices HAXA.Tests.csproj.CoreCompileInputs.cache
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\Microsoft.TestPlatform.AdapterUtilities.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
 C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Bienes Raices HAXA.Tests.dll.config
 C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Bienes Raices HAXA.Tests.dll
 C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Bienes Raices HAXA.Tests.pdb
@@ -63,6 +71,8 @@ C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tes
 C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\System.Web.WebPages.Razor.resources.dll
 C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\es\System.Web.Optimization.resources.dll
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\obj\Debug\Bienes Raices HAXA.Tests.csproj.AssemblyReference.cache
+C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\obj\Debug\Bienes Raices HAXA.Tests.csproj.CoreCompileInputs.cache
 C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\obj\Debug\Bienes Raices HAXA.Tests.csproj.CopyComplete
 C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\obj\Debug\Bienes Raices HAXA.Tests.dll
 C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\obj\Debug\Bienes Raices HAXA.Tests.pdb
