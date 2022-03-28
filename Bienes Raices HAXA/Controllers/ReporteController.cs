@@ -91,7 +91,7 @@ namespace Bienes_Raices_HAXA.Controllers
                 ReporteModel modelo = new ReporteModel();
                 List<Citas> listaCitas = modelo.obtenerCitas();
 
-                FileStream fs = new FileStream(@"C:/REPORTES/ReporteCitas.pdf", FileMode.Create);
+                FileStream fs = new FileStream(Server.MapPath("~/Content/")+"ReporteCitas.pdf", FileMode.Create);
                 Document doc = new Document(PageSize.LETTER, 5, 5, 7, 7);
                 PdfWriter pw = PdfWriter.GetInstance(doc, fs);
 
@@ -249,6 +249,7 @@ namespace Bienes_Raices_HAXA.Controllers
                 doc.Add(tbl);
                 doc.Close();
                 pw.Close();
+                
                 RedirectToAction("ReporteCitas").ExecuteResult(this.ControllerContext);
 
             }
@@ -267,7 +268,7 @@ namespace Bienes_Raices_HAXA.Controllers
                 ReporteModel modelo = new ReporteModel();
                 List<Propiedad> listaPropiedades = modelo.obtenerPropiedad();
 
-                FileStream fs = new FileStream(@"C:/REPORTES/ReportePropiedades.pdf", FileMode.Create);
+                FileStream fs = new FileStream(Server.MapPath("~/Content/") + "ReportePropiedades.pdf", FileMode.Create);
                 Document doc = new Document(PageSize.LETTER, 5, 5, 7, 7);
                 PdfWriter pw = PdfWriter.GetInstance(doc, fs);
 
