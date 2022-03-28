@@ -10,7 +10,7 @@
     var correo = $.trim($("#email").val());
 
     Swal.fire({
-        title: 'Segur@ de eliminar el empleado?',
+        title: '¿Seguro de eliminar el empleado?',
         text: "No se podra revertir  una vez eliminado",
         icon: 'warning',
         showCancelButton: true,
