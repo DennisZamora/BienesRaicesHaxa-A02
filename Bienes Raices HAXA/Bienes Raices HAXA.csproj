@@ -311,10 +311,14 @@
     <Content Include="Content\price_range_style.css" />
     <Content Include="Content\RegistroUsuario.css" />
     <Content Include="Content\shopify.css" />
+    <Content Include="Content\table.css" />
     <Content Include="favicon.ico" />
     <Content Include="Functions\AddPropiedad.js" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="JS\RegistrarEmpleado.js" />
+    <Content Include="JS\EliminarEmpleado.js" />
+    <Content Include="JS\ActualizarEmpleados.js" />
     <Content Include="JS\AgregarCita.js" />
     <Content Include="JS\index.js" />
     <Content Include="JS\perfil.js" />
@@ -442,6 +446,7 @@
     <Content Include="Views\Perfil\PerfilPartial.cshtml" />
     <Content Include="Views\Home\Filtrado.cshtml" />
     <Content Include="Views\Home\Propiedades.cshtml" />
+    <Content Include="Views\GestionEmpleados\RegistrarEmpleados.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
