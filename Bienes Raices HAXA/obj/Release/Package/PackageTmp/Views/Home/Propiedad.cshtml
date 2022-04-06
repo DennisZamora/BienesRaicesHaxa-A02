@@ -1,0 +1,138 @@
+﻿@model Bienes_Raices_HAXA.Models.PropiedadV
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        @{ ViewBag.Title = "Propiedades"; }
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Raleway", Arial, Helvetica, sans-serif
+        }
+
+        .mySlides {
+            display: none
+        }
+    </style>
+    @Styles.Render("~/Content/main.css")
+    @Styles.Render("https://fonts.googleapis.com/css?family=Raleway")
+    @Styles.Render("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+</head>
+<body>
+    <!-- Top menu on small screens -->
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main w3-white">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:80px"></div>
+
+        <!-- Slideshow Header -->
+        <div class="w3-container" id="apartment">
+            <h2 class="w3-text-green">@Model.Property.nombre</h2>
+            @foreach (var item in Model.Img)
+            {
+            <div class="w3-display-container mySlides">
+                <img src="@item.link" style="width:100%;margin-bottom:-6px">
+            </div>      }
+            <div class="w3-display-container mySlides">
+                <img src="~/Content/images/Portada-bienes-raices.jpg" style="width:100%;margin-bottom:-6px">
+            </div>
+        </div>
+        <div class="w3-row-padding w3-section">
+            @foreach (var item in Model.Img)
+            {
+            <div class="w3-col s3">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="@item.link" style="width:100%;cursor:pointer" onclick="currentDiv(@item.link)">
+            </div>      }
+            <div class="w3-col s3">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="~/Content/images/Portada-bienes-raices.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(~/Content/images/Portada-bienes-raices.jpg)">
+            </div>
+        </div>
+        <div class="w3-container">
+
+            @if (Model.Property.descripcion != null)
+            {
+            <h4><strong>Detalle</strong></h4>
+            <div class="w3-row w3-large">
+                <p>@Model.Property.descripcion</p>
+            </div>}
+
+            <hr>
+            <h4><strong>Caracteristicas</strong></h4>
+            <div class="w3-row w3-large">
+                <div>
+                    <p>M2= @Model.Property.m2</p>
+                </div>
+                <div class="w3-col s6">
+                    @if (Model.Property.baños != null)
+                    {
+                    <p><i class="fa fa-fw fa-bath"></i> Baños: @Model.Property.baños</p>}
+                    @if (Model.Property.habitacion != null)
+                    {
+                    <p><i class="fa fa-fw fa-bed"></i> Habitaciones: @Model.Property.habitacion</p>}
+                </div>
+                <div class="w3-col s6">
+                    @if (Model.Property.pisos != null)
+                    {
+                    <p>Niveles: @Model.Property.pisos</p>}
+                    @if (Model.Property.garage != null)
+                    {
+                    <p><i></i> Plazas de parqueo: @Model.Property.garage</p>}
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="w3-container">
+
+            <h2>Citas</h2>
+
+            @if (Session["id"] != null)
+            {
+            @Html.HiddenFor(x => x.Property.idPropiedad)
+            <a class="btn btn-success" style="margin-bottom:10px" onclick=PopupForm1('@Url.Action("AgregarCita", "Citas" )')><i class="fa fa-plus"></i>Agregar cita</a> }
+                    else
+                    {
+            <p>¡Inicia sesión para solictar una cita!</p>}
+        </div>
+    </div>
+    <hr>
+    <!-- Contact -->
+    <div class="w3-container" id="contact">
+        <h2>Contact</h2>
+        <i class="fa fa-phone" style="width:30px"></i> Telefono: +506 8989-8989<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: contacto@brhaxa.com<br>
+    </div>
+    <!-- End page content -->
+    </div>
+
+    <script>// Slideshow Apartment Images
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " w3-opacity-off";
+        }</script>
+</body>
+</html>

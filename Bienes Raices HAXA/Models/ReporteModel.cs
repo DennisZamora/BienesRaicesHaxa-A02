@@ -1,8 +1,7 @@
-﻿using Bienes_Raices_HAXA.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace REPORTES.Models
+namespace Bienes_Raices_HAXA.Models
 {
     public class ReporteModel
     {
@@ -11,7 +10,7 @@ namespace REPORTES.Models
             using (var contexto = new BRHaxaEntities())
             {
                 var lista = (from x in contexto.Propiedad
-                             orderby x.idPropiedad descending
+                             orderby x.idPropiedad ascending
                              select x).ToList();
 
                 if (lista.Count > 0)
@@ -25,13 +24,56 @@ namespace REPORTES.Models
             }
         }
 
+        public List<Citas> obtenerCitas()
+        {
+            using (var contexto = new BRHaxaEntities())
+            {
+                var listaCitas = (from x in contexto.Citas
+                                  select x).ToList();
+                if (listaCitas.Count > 0)
+                {
+                    return listaCitas;
+                }
+                else
+                {
+                    return new List<Citas>();
+                }
+            }
+        }
+
+        //public List<Citas> obtenerCitas()
+        //{
+        //    using(var contexto = new BRHaxaEntities())
+        //    {
+        //        var listaCitas = (from x in contexto.Citas
+        //                          join p in contexto.Propiedad on x.idPropiedad equals p.idPropiedad
+        //                          join t in contexto.Usuario on x.idUsuario equals t.idUsuario
+        //                          select new { 
+        //                            x.idCita,
+        //                            t.nombree,
+        //                            p.nombre,
+        //                            x.titulo,
+        //                            x.fechaInicio,
+        //                            x.fechaFinal
+        //                          }).ToList();
+        //        if (listaCitas.Count > 0)
+        //        {
+        //            return listaCitas;
+        //        }
+        //        else
+        //        {
+        //            return new List<Citas>();
+        //        }
+        //    }
+        //}
+
         public List<Propiedad> obtenerPropiedadFiltrada(Propiedad propiedad)
         {
             using (var contexto = new BRHaxaEntities())
             {
                 var lista = (from x in contexto.Propiedad
                              where x.idCategoria == propiedad.idCategoria
-                             orderby x.idPropiedad descending
+                             orderby x.idPropiedad ascending
                              select x).ToList();
 
                 if (lista.Count > 0)
@@ -54,7 +96,6 @@ namespace REPORTES.Models
                 return lista;
             }
         }
-
         //public List<Categoria> categoria()
         //  {
         //      using (var contexto = new BRHaxaEntities())

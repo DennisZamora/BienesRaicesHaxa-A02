@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace Bienes_Raices_HAXA.Models
 {
@@ -59,7 +58,7 @@ namespace Bienes_Raices_HAXA.Models
             }
         }
 
-        public Boolean editarPerfil(Usuario perfil, string primerApellido, string segundoApellido, string contrasena,string correo)
+        public Boolean editarPerfil(Usuario perfil, string primerApellido, string segundoApellido, string contrasena, string correo)
         {
             using (var contexto = new BRHaxaEntities())
             {

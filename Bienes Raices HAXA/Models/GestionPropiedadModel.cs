@@ -35,8 +35,8 @@ namespace Bienes_Raices_HAXA.Models
         public PropiedadV getPropiedad(long id)
         {
             var prop = new List<PropiedadV>();
-                prop = ListarPropiedades();
-                return prop.FirstOrDefault(x => x.Property.idPropiedad == id);
+            prop = ListarPropiedades();
+            return prop.FirstOrDefault(x => x.Property.idPropiedad == id);
         }
 
         public void agregarImagen(string imagen, long idPropiedad)
@@ -205,7 +205,8 @@ namespace Bienes_Raices_HAXA.Models
 
         public List<PropiedadV> filtrarPropiedad(int idCategoria, string provincia, string canton, int? pisos, int? habitacion, int? baños, int? garage, int precioMin, int precioMax)
         {
-            try{
+            try
+            {
                 properties = new List<PropiedadV>();
                 var resultado = new List<PropiedadV>();
                 using (var contexto = new BRHaxaEntities())
@@ -222,26 +223,27 @@ namespace Bienes_Raices_HAXA.Models
                             Img = imagenes
                         });
                     }
-                
-                resultado =  properties.Where(x => x.Property.Categoria.idCategoria == idCategoria && (Convert.ToInt32(x.Property.precio) > precioMin)).ToList();
+
+                    resultado = properties.Where(x => x.Property.Categoria.idCategoria == idCategoria && (Convert.ToInt32(x.Property.precio) > precioMin)).ToList();
                     if (precioMax == 2000000)
                     {
 
                     }
                     else
                     {
-                        resultado = resultado.Where(x => Convert.ToInt32(x.Property.precio)<= precioMax).ToList();
+                        resultado = resultado.Where(x => Convert.ToInt32(x.Property.precio) <= precioMax).ToList();
                     }
-                    if (provincia != "") {resultado = resultado.Where(x => x.Property.provincia == provincia).ToList();}
+                    if (provincia != "") { resultado = resultado.Where(x => x.Property.provincia == provincia).ToList(); }
                     if (canton != "") { resultado = resultado.Where(x => x.Property.canton == canton).ToList(); }
                     if (pisos != null) { resultado = resultado.Where(x => x.Property.pisos >= pisos).ToList(); }
                     if (habitacion != null) { resultado = resultado.Where(x => x.Property.habitacion >= habitacion).ToList(); }
                     if (baños != null) { resultado = resultado.Where(x => x.Property.baños >= baños).ToList(); }
                     if (garage != null) { resultado = resultado.Where(x => x.Property.garage >= garage).ToList(); }
-                                 
+
                 }
                 return resultado;
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw;
             }

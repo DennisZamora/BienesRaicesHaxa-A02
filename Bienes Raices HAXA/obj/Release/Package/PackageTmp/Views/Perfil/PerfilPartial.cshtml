@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Bienes_Raices_HAXA.Models.PerfilPartial>
+
+
+
+<table class="table">
+    <thead>
+    <th>Provincia</th>
+    <th>Cantón</th>
+    <th>Dirección</th>
+    <th>Fecha de inicio</th>
+    <th>Fecha final</th>
+    </thead>
+
+    <tbody id="BusquedaDatos">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.provincia</td>
+                <td>@item.canton</td>
+                <td>@item.direccion </td>
+                <td>@item.fechaInicio</td>
+                <td>@item.fechaFinal</td>
+                <td>@Html.ActionLink("Eliminar", "EliminarDueno", new { identificacion = @item.idCita })</td>
+            </tr>
+
+        }

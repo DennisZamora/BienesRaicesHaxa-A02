@@ -54,9 +54,6 @@
     <Reference Include="Microsoft.AspNetCore.Http.Features, Version=1.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\Bienes Raices HAXA\packages\Microsoft.AspNetCore.Http.Features.1.0.3\lib\net451\Microsoft.AspNetCore.Http.Features.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\Bienes Raices HAXA\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\Bienes Raices HAXA\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
@@ -80,9 +77,6 @@
       <HintPath>..\Bienes Raices HAXA\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.CodeDom, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\Bienes Raices HAXA\packages\System.CodeDom.6.0.0\lib\net461\System.CodeDom.dll</HintPath>
-    </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -184,11 +178,9 @@
     <Error Condition="!Exists('..\Bienes Raices HAXA\packages\MSTest.TestAdapter.2.2.8\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\Bienes Raices HAXA\packages\MSTest.TestAdapter.2.2.8\build\net45\MSTest.TestAdapter.targets'))" />
     <Error Condition="!Exists('..\Bienes Raices HAXA\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\Bienes Raices HAXA\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
     <Error Condition="!Exists('..\Bienes Raices HAXA\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\Bienes Raices HAXA\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
-    <Error Condition="!Exists('..\Bienes Raices HAXA\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\Bienes Raices HAXA\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
   </Target>
   <Import Project="..\Bienes Raices HAXA\packages\MSTest.TestAdapter.2.2.8\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\Bienes Raices HAXA\packages\MSTest.TestAdapter.2.2.8\build\net45\MSTest.TestAdapter.targets')" />
   <Import Project="..\Bienes Raices HAXA\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\Bienes Raices HAXA\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
-  <Import Project="..\Bienes Raices HAXA\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\Bienes Raices HAXA\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

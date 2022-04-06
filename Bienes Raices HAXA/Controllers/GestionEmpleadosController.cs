@@ -1,8 +1,4 @@
 ﻿using Bienes_Raices_HAXA.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Bienes_Raices_HAXA.Controllers
@@ -70,7 +66,7 @@ namespace Bienes_Raices_HAXA.Controllers
             }
         }
 
-        
+
 
         public ActionResult RegistrarEmpleados()
         {

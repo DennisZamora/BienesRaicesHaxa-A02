@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Bienes_Raices_HAXA.Models.Usuario>
+@{
+    ViewBag.Title = "Buscar Dueño";
+}
+<h2>Buscar Dueño</h2>
+
+<table class="table">
+    <thead>
+    <th>ID</th>
+    <th>Cedula</th>
+    <th>Nombre</th>
+    <th>Correo</th>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.idUsuario</td>
+            <td>@item.cedula_identificacion</td>
+            <td>@item.nombre @item.apellido1 @item.apellido2</td>
+            <td>@item.email</td>
+            <td>
+                <a href="@Url.Action("AgregarPropiedad","AddPropiedad",new { idUsuario = @item.idUsuario })" class="w3-bar-item w3-button">Seleccionar</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
