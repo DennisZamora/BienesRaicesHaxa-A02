@@ -84,6 +84,20 @@ namespace Bienes_Raices_HAXA.Controllers
             return View(respuesta);
         }
 
+        public ActionResult ReporteEmpleados()
+        {
+            ReporteModel rm = new ReporteModel();
+            var respuesta = rm.obtenerEmpleados();
+            return View(respuesta);
+        }
+
+        public ActionResult ReporteUsuarios()
+        {
+            ReporteModel rm = new ReporteModel();
+            var respuesta = rm.obtenerUsuarios();
+            return View(respuesta);
+        }
+
         public ActionResult generarPDFCitas(object sender, EventArgs e)
         {
             try
@@ -576,5 +590,330 @@ namespace Bienes_Raices_HAXA.Controllers
             }
         }
 
+        public ActionResult generarPDFUsuarios(object sender, EventArgs e)
+        {
+            try
+            {
+                ReporteModel modelo = new ReporteModel();
+                List<Usuario> listaUsuarios = modelo.obtenerUsuarios();
+
+                FileStream fs = new FileStream(Server.MapPath("~/Content/") + "ReporteUsuarios.pdf", FileMode.Create);
+                Document doc = new Document(PageSize.LETTER, 5, 5, 7, 7);
+                PdfWriter pw = PdfWriter.GetInstance(doc, fs);
+
+                doc.Open();
+                //TITULO Y AUTOR 
+                doc.AddAuthor("Reporte");
+                doc.AddCreator("Bienes raíces Haxa");
+
+                //DEFINIR FUENTE DEL DOCUMENTO
+                iTextSharp.text.Font standarFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.BOLD, BaseColor.WHITE);
+                iTextSharp.text.Font standarFonts = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.NORMAL, BaseColor.WHITE);
+                iTextSharp.text.Font standarFontss = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.NORMAL, BaseColor.DARK_GRAY);
+
+
+                //ENCABEZADO DEL DOCUMENTO
+                doc.Add(new Paragraph("Reporte Usuarios"));
+                doc.Add(Chunk.NEWLINE);
+
+                //ENCABEZADO COLUMNAS
+                PdfPTable tbl = new PdfPTable(7);
+                tbl.WidthPercentage = 100;
+
+                //ORDEN DE NOMBRE DE LAS COLUMNAS
+                PdfPCell cl1 = new PdfPCell(new Phrase("ID", standarFont));
+                cl1.BorderWidth = 0;
+                cl1.BorderWidthBottom = 0.75f;
+                cl1.BackgroundColor = new BaseColor(89, 89, 89);
+
+                PdfPCell cl2 = new PdfPCell(new Phrase("Nombre", standarFont));
+                cl2.BorderWidth = 0;
+                cl2.BorderWidthBottom = 0.75f;
+                cl2.BackgroundColor = new BaseColor(89, 89, 89);
+
+                PdfPCell cl3 = new PdfPCell(new Phrase("Primer apellido", standarFont));
+                cl3.BorderWidth = 0;
+                cl3.BorderWidthBottom = 0.75f;
+                cl3.BackgroundColor = new BaseColor(89, 89, 89);
+
+                PdfPCell cl4 = new PdfPCell(new Phrase("Segundo apellido", standarFont));
+                cl4.BorderWidth = 0;
+                cl4.BorderWidthBottom = 0.75f;
+                cl4.BackgroundColor = new BaseColor(89, 89, 89);
+
+                PdfPCell cl5 = new PdfPCell(new Phrase("Teléfono", standarFont));
+                cl5.BorderWidth = 0;
+                cl5.BorderWidthBottom = 0.75f;
+                cl5.BackgroundColor = new BaseColor(89, 89, 89);
+
+                PdfPCell cl6 = new PdfPCell(new Phrase("Email", standarFont));
+                cl6.BorderWidth = 0;
+                cl6.BorderWidthBottom = 0.75f;
+                cl6.BackgroundColor = new BaseColor(89, 89, 89);
+
+                PdfPCell cl7 = new PdfPCell(new Phrase("Password", standarFont));
+                cl7.BorderWidth = 0;
+                cl7.BorderWidthBottom = 0.75f;
+                cl7.BackgroundColor = new BaseColor(89, 89, 89);
+
+                tbl.AddCell(cl1);
+                tbl.AddCell(cl2);
+                tbl.AddCell(cl3);
+                tbl.AddCell(cl4);
+                tbl.AddCell(cl5);
+                tbl.AddCell(cl6);
+                tbl.AddCell(cl7);
+
+                var i = 0;
+                //AGREGAR DATOS AL PDF
+                foreach (var usuario in listaUsuarios)
+                {
+                    if (i % 2 == 0)
+                    {
+                        cl1 = new PdfPCell(new Phrase(usuario.cedula_identificacion.ToString(), standarFontss));
+                        cl1.BorderWidth = 0;
+                        //cl1.BackgroundColor = BaseColor.LIGHT_GRAY;
+
+                        cl2 = new PdfPCell(new Phrase(usuario.nombre.ToString(), standarFontss));
+                        cl2.BorderWidth = 0;
+                        //cl2.BackgroundColor = BaseColor.LIGHT_GRAY;
+
+                        cl3 = new PdfPCell(new Phrase(usuario.apellido1.ToString(), standarFontss));
+                        cl3.BorderWidth = 0;
+                        //cl3.BackgroundColor = BaseColor.LIGHT_GRAY;
+
+                        cl4 = new PdfPCell(new Phrase(usuario.apellido2.ToString(), standarFontss));
+                        cl4.BorderWidth = 0;
+                        //cl4.BackgroundColor = BaseColor.LIGHT_GRAY;
+
+                        cl5 = new PdfPCell(new Phrase(usuario.telefono.ToString(), standarFontss));
+                        cl5.BorderWidth = 0;
+                        //cl5.BackgroundColor = BaseColor.LIGHT_GRAY;
+
+                        cl6 = new PdfPCell(new Phrase(usuario.email.ToString(), standarFontss));
+                        cl6.BorderWidth = 0;
+                        //cl6.BackgroundColor = BaseColor.LIGHT_GRAY;
+
+                        cl7 = new PdfPCell(new Phrase(usuario.password.ToString(), standarFontss));
+                        cl7.BorderWidth = 0;
+                        //cl7.BackgroundColor = BaseColor.LIGHT_GRAY;
+                    }
+                    else
+                    {
+                        cl1 = new PdfPCell(new Phrase(usuario.cedula_identificacion.ToString(), standarFonts));
+                        cl1.BorderWidth = 0;
+                        cl1.BackgroundColor = new BaseColor(89, 89, 89);
+
+                        cl2 = new PdfPCell(new Phrase(usuario.nombre.ToString(), standarFonts));
+                        cl2.BorderWidth = 0;
+                        cl2.BackgroundColor = new BaseColor(89, 89, 89);
+
+                        cl3 = new PdfPCell(new Phrase(usuario.apellido1.ToString(), standarFonts));
+                        cl3.BorderWidth = 0;
+                        cl3.BackgroundColor = new BaseColor(89, 89, 89);
+
+                        cl4 = new PdfPCell(new Phrase(usuario.apellido2.ToString(), standarFonts));
+                        cl4.BorderWidth = 0;
+                        cl4.BackgroundColor = new BaseColor(89, 89, 89);
+
+                        cl5 = new PdfPCell(new Phrase(usuario.telefono.ToString(), standarFonts));
+                        cl5.BorderWidth = 0;
+                        cl5.BackgroundColor = new BaseColor(89, 89, 89);
+
+                        cl6 = new PdfPCell(new Phrase(usuario.email.ToString(), standarFonts));
+                        cl6.BorderWidth = 0;
+                        cl6.BackgroundColor = new BaseColor(89, 89, 89);
+
+                        cl7 = new PdfPCell(new Phrase(usuario.password.ToString(), standarFonts));
+                        cl7.BorderWidth = 0;
+                        cl7.BackgroundColor = new BaseColor(89, 89, 89);
+
+                    }
+
+                    tbl.AddCell(cl1);
+                    tbl.AddCell(cl2);
+                    tbl.AddCell(cl3);
+                    tbl.AddCell(cl4);
+                    tbl.AddCell(cl5);
+                    tbl.AddCell(cl6);
+                    tbl.AddCell(cl7);
+
+                    i++;
+                }
+
+                doc.Add(tbl);
+                doc.Close();
+                pw.Close();
+                return Redirect(@"https://bienesraiceshaxa.azurewebsites.net/Content/ReporteUsuarios.pdf");
+              //return Redirect(@"https://localhost:44335/Content/ReporteUsuarios.pdf");
+            }
+            catch (Exception ee)
+            {
+                throw (ee);
+            }
+        }
+
+        public ActionResult generarPDFEmpleados(object sender, EventArgs e)
+        {
+            try
+            {
+                ReporteModel modelo = new ReporteModel();
+                List<Usuario> listaEmpleados = modelo.obtenerEmpleados();
+
+                FileStream fs = new FileStream(Server.MapPath("~/Content/") + "ReporteEmpleados.pdf", FileMode.Create);
+                Document doc = new Document(PageSize.LETTER, 5, 5, 7, 7);
+                PdfWriter pw = PdfWriter.GetInstance(doc, fs);
+
+                doc.Open();
+                //TITULO Y AUTOR 
+                doc.AddAuthor("Reporte");
+                doc.AddCreator("Bienes raíces Haxa");
+
+                //DEFINIR FUENTE DEL DOCUMENTO
+                iTextSharp.text.Font standarFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.BOLD, BaseColor.WHITE);
+                iTextSharp.text.Font standarFonts = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.NORMAL, BaseColor.WHITE);
+                iTextSharp.text.Font standarFontss = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.NORMAL, BaseColor.DARK_GRAY);
+
+
+                //ENCABEZADO DEL DOCUMENTO
+                doc.Add(new Paragraph("Reporte Empleados"));
+                doc.Add(Chunk.NEWLINE);
+
+                //ENCABEZADO COLUMNAS
+                PdfPTable tbl = new PdfPTable(7);
+                tbl.WidthPercentage = 100;
+
+                //ORDEN DE NOMBRE DE LAS COLUMNAS
+                PdfPCell cl1 = new PdfPCell(new Phrase("ID", standarFont));
+                cl1.BorderWidth = 0;
+                cl1.BorderWidthBottom = 0.75f;
+                cl1.BackgroundColor = new BaseColor(89, 89, 89);
+
+                PdfPCell cl2 = new PdfPCell(new Phrase("Nombre", standarFont));
+                cl2.BorderWidth = 0;
+                cl2.BorderWidthBottom = 0.75f;
+                cl2.BackgroundColor = new BaseColor(89, 89, 89);
+
+                PdfPCell cl3 = new PdfPCell(new Phrase("Primer apellido", standarFont));
+                cl3.BorderWidth = 0;
+                cl3.BorderWidthBottom = 0.75f;
+                cl3.BackgroundColor = new BaseColor(89, 89, 89);
+
+                PdfPCell cl4 = new PdfPCell(new Phrase("Segundo apellido", standarFont));
+                cl4.BorderWidth = 0;
+                cl4.BorderWidthBottom = 0.75f;
+                cl4.BackgroundColor = new BaseColor(89, 89, 89);
+
+                PdfPCell cl5 = new PdfPCell(new Phrase("Teléfono", standarFont));
+                cl5.BorderWidth = 0;
+                cl5.BorderWidthBottom = 0.75f;
+                cl5.BackgroundColor = new BaseColor(89, 89, 89);
+
+                PdfPCell cl6 = new PdfPCell(new Phrase("Email", standarFont));
+                cl6.BorderWidth = 0;
+                cl6.BorderWidthBottom = 0.75f;
+                cl6.BackgroundColor = new BaseColor(89, 89, 89);
+
+                PdfPCell cl7 = new PdfPCell(new Phrase("Password", standarFont));
+                cl7.BorderWidth = 0;
+                cl7.BorderWidthBottom = 0.75f;
+                cl7.BackgroundColor = new BaseColor(89, 89, 89);
+
+                tbl.AddCell(cl1);
+                tbl.AddCell(cl2);
+                tbl.AddCell(cl3);
+                tbl.AddCell(cl4);
+                tbl.AddCell(cl5);
+                tbl.AddCell(cl6);
+                tbl.AddCell(cl7);
+
+                var i = 0;
+                //AGREGAR DATOS AL PDF
+                foreach (var empleado in listaEmpleados)
+                {
+                    if (i % 2 == 0)
+                    {
+                        cl1 = new PdfPCell(new Phrase(empleado.cedula_identificacion.ToString(), standarFontss));
+                        cl1.BorderWidth = 0;
+                        //cl1.BackgroundColor = BaseColor.LIGHT_GRAY;
+
+                        cl2 = new PdfPCell(new Phrase(empleado.nombre.ToString(), standarFontss));
+                        cl2.BorderWidth = 0;
+                        //cl2.BackgroundColor = BaseColor.LIGHT_GRAY;
+
+                        cl3 = new PdfPCell(new Phrase(empleado.apellido1.ToString(), standarFontss));
+                        cl3.BorderWidth = 0;
+                        //cl3.BackgroundColor = BaseColor.LIGHT_GRAY;
+
+                        cl4 = new PdfPCell(new Phrase(empleado.apellido2.ToString(), standarFontss));
+                        cl4.BorderWidth = 0;
+                        //cl4.BackgroundColor = BaseColor.LIGHT_GRAY;
+
+                        cl5 = new PdfPCell(new Phrase(empleado.telefono.ToString(), standarFontss));
+                        cl5.BorderWidth = 0;
+                        //cl5.BackgroundColor = BaseColor.LIGHT_GRAY;
+
+                        cl6 = new PdfPCell(new Phrase(empleado.email.ToString(), standarFontss));
+                        cl6.BorderWidth = 0;
+                        //cl6.BackgroundColor = BaseColor.LIGHT_GRAY;
+
+                        cl7 = new PdfPCell(new Phrase(empleado.password.ToString(), standarFontss));
+                        cl7.BorderWidth = 0;
+                        //cl7.BackgroundColor = BaseColor.LIGHT_GRAY;
+                    }
+                    else
+                    {
+                        cl1 = new PdfPCell(new Phrase(empleado.cedula_identificacion.ToString(), standarFonts));
+                        cl1.BorderWidth = 0;
+                        cl1.BackgroundColor = new BaseColor(89, 89, 89);
+
+                        cl2 = new PdfPCell(new Phrase(empleado.nombre.ToString(), standarFonts));
+                        cl2.BorderWidth = 0;
+                        cl2.BackgroundColor = new BaseColor(89, 89, 89);
+
+                        cl3 = new PdfPCell(new Phrase(empleado.apellido1.ToString(), standarFonts));
+                        cl3.BorderWidth = 0;
+                        cl3.BackgroundColor = new BaseColor(89, 89, 89);
+
+                        cl4 = new PdfPCell(new Phrase(empleado.apellido2.ToString(), standarFonts));
+                        cl4.BorderWidth = 0;
+                        cl4.BackgroundColor = new BaseColor(89, 89, 89);
+
+                        cl5 = new PdfPCell(new Phrase(empleado.telefono.ToString(), standarFonts));
+                        cl5.BorderWidth = 0;
+                        cl5.BackgroundColor = new BaseColor(89, 89, 89);
+
+                        cl6 = new PdfPCell(new Phrase(empleado.email.ToString(), standarFonts));
+                        cl6.BorderWidth = 0;
+                        cl6.BackgroundColor = new BaseColor(89, 89, 89);
+
+                        cl7 = new PdfPCell(new Phrase(empleado.password.ToString(), standarFonts));
+                        cl7.BorderWidth = 0;
+                        cl7.BackgroundColor = new BaseColor(89, 89, 89);
+
+                    }
+
+                    tbl.AddCell(cl1);
+                    tbl.AddCell(cl2);
+                    tbl.AddCell(cl3);
+                    tbl.AddCell(cl4);
+                    tbl.AddCell(cl5);
+                    tbl.AddCell(cl6);
+                    tbl.AddCell(cl7);
+
+                    i++;
+                }
+
+                doc.Add(tbl);
+                doc.Close();
+                pw.Close();
+                return Redirect(@"https://bienesraiceshaxa.azurewebsites.net/Content/ReporteEmpleados.pdf");
+              //return Redirect(@"https://localhost:44335/Content/ReporteEmpleados.pdf");
+            }
+            catch (Exception ee)
+            {
+                throw (ee);
+            }
+        }
     }
 }
