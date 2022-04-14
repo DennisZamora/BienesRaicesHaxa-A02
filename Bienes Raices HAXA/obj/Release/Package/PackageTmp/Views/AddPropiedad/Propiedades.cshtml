@@ -1,0 +1,127 @@
+﻿@model IEnumerable<Bienes_Raices_HAXA.Models.PropiedadV>
+
+@{
+    ViewBag.Title = "Propiedades";
+}
+
+<h2>Propiedades</h2>
+
+<p>
+    <a href="@Url.Action("AgregarPropiedad","GestionDueno")" class="w3-button">Agregar Propiedad</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Imagen")
+        </th>
+        <th>
+            @Html.DisplayName("Nombre")
+        </th>
+        <th>
+            @Html.DisplayName("Provincia")
+        </th>
+        <th>
+            @Html.DisplayName("Canton")
+        </th>
+        <th>
+            @Html.DisplayName("Distrito")
+        </th>
+        <th>
+            @Html.DisplayName("Direccion")
+        </th>
+        <th>
+            @Html.DisplayName("Descripcion")
+        </th>
+        <th>
+            @Html.DisplayName("Pisos")
+        </th>
+        <th>
+            @Html.DisplayName("m2")
+        </th>
+        <th>
+            @Html.DisplayName("Habitaciones")
+        </th>
+        <th>
+            @Html.DisplayName("Baños")
+        </th>
+        <th>
+            @Html.DisplayName("Garage")
+        </th>
+        <th>
+            @Html.DisplayName("Precio")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Property.idEstado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Property.idCategoria)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+    <tr>
+        <td>
+            @{int lengthImg = item.Img.Count; }
+            @switch (lengthImg)
+            {
+                case 0:
+            <img class="boost-pfs-filter-product-item-main-image Image--lazyLoad lazyautosizes ls-is-cached lazyloaded"
+                 src="~/Content/images/Portada-bienes-raices.jpg" width="100" height="100"
+                 alt="@item.Property.nombre" sizes="auto" />break;
+                default:
+            <img class="boost-pfs-filter-product-item-main-image Image--lazyLoad lazyautosizes ls-is-cached lazyloaded"
+                 src="@item.Img[0].link" width="100" height="100"
+                 alt="@item.Property.nombre" sizes="auto" />break;
+            }
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Property.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Property.provincia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Property.canton)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Property.distrito)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Property.direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Property.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Property.pisos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Property.m2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Property.habitacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Property.baños)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Property.garage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Property.precio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Property.idCategoria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Property.idEstado)
+        </td>
+        <td>
+            <a href="@Url.Action("EditarPropiedad","AddPropiedad", new { id = item.Property.idPropiedad })" class="w3-button">Editar</a>
+            <br /><a href="@Url.Action("Propiedad","Home", new { id = item.Property.idPropiedad })" class="w3-button">Ver</a>
+            <br /><a href="@Url.Action("Eliminar Propiedad","AddPropiedad", new { id = item.Property.idPropiedad })" class="w3-button">Eliminar</a>
+        </td>
+    </tr>
+}
+</table>

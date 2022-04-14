@@ -10,7 +10,7 @@ namespace Bienes_Raices_HAXA.Controllers
     public class LogInController : Controller
     {
 
-        string urlDomain = "https://localhost:44335/";
+        public string urlDomain = "https://bienesraiceshaxa.azurewebsites.net/";
         public ActionResult Login()
         {
             if (Session["email"] != null)
@@ -29,14 +29,14 @@ namespace Bienes_Raices_HAXA.Controllers
         }
 
         [HttpPost]
-        public ActionResult IniciarRecuperar(Models.ViewModel.RecuperarViewModel model,string correo)
+        public ActionResult IniciarRecuperar(Models.ViewModel.RecuperarViewModel model, string correo)
         {
             try
             {
                 string token = GetSha256(Guid.NewGuid().ToString());
                 RecuperacionContrasena modelo = new RecuperacionContrasena();
                 var respuesta = modelo.recuperar(correo, token);
-                
+
                 if (respuesta != null)
                 {
                     SendEmail(respuesta.email, token);
@@ -61,7 +61,7 @@ namespace Bienes_Raices_HAXA.Controllers
         }
 
         [HttpPost]
-        public ActionResult Recuperar(string token,string contrasena)
+        public ActionResult Recuperar(string token, string contrasena)
         {
             try
             {

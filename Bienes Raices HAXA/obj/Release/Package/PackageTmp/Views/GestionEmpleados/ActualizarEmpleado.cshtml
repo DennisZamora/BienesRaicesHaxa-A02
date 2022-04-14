@@ -1,0 +1,68 @@
+﻿@using Bienes_Raices_HAXA.Models
+@{
+    var empleado = ViewData["empleado"] as Usuario;
+}
+
+@{
+    ViewBag.Title = "ActualizarEmpleado";
+}
+
+@Styles.Render("~/Content/RegistroUsuario.css")
+
+<h2>Actualizar Empleado</h2>
+<div class="login-block">
+
+        <div class="singin">
+            <div class="central">
+                <div class="caja1">
+                    <div class="form-group">
+                        @Html.TextBox("idUsuario", empleado.idUsuario, new {  @hidden = true })
+                        @Html.TextBox("idRol",empleado.idRol, new { @hidden = true })
+                        <br />
+
+                        @Html.Label("lblCedula_identificacion", "Cédula", new { @class = "form-label" })
+                        <br />
+                        @Html.TextBox("cedula_identificacion", empleado.cedula_identificacion, new { placeholder = empleado.cedula_identificacion })
+                        <br />
+
+                        @Html.Label("lblNombre", "Nombre", new { @class = "form-label" })
+                        <br />
+                        @Html.TextBox("nombre", empleado.nombre, new { placeholder = empleado.nombre })
+                        <br />
+
+                        @Html.Label("lblApellido1", "Primer Apellido", new { @class = "form-label" })
+                        <br />
+                        @Html.TextBox("apellido1", empleado.apellido1, new { placeholder = empleado.apellido1 })
+                        <br />
+                    </div>
+                </div>
+                <div class="caja2">
+                    <div class="form-group">
+                        @Html.Label("lblApellido2", "Segundo Apellido", new { @class = "form-label" })
+                        <br />
+                        @Html.TextBox("apellido2", empleado.apellido2, new { placeholder = empleado.apellido2 })
+                        <br />
+
+                        @Html.Label("lblTelefono", "Teléfono", new { @class = "form-label" })
+                        <br />
+                        @Html.TextBox("telefono", empleado.telefono, new { placeholder = empleado.telefono })
+                        <br />
+
+                        @Html.Label("lblEmail", "Email", new { @class = "form-label" })
+                        <br />
+                        @Html.TextBox("email", empleado.email, new { placeholder = empleado.email })
+                        <br />
+
+                        @Html.Label("lblPassword", "Contraseña", new { @class = "form-label" })
+                        <br />
+                        @Html.TextBox("password", empleado.password, new { @type = "password", placeholder = empleado.password })
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button value="actualizar" id="actualizar" style="width:200px" onclick="actualizarEmpleado();" class="button" type="submit">Actualizar</button>
+            </div>
+        </div>
+    
+</div>

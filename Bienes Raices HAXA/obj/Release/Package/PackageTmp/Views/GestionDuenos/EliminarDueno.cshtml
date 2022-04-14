@@ -1,0 +1,90 @@
+﻿@using Bienes_Raices_HAXA.Models
+@{
+    var dueño = ViewData["dueño"] as Usuario;
+}
+
+@{
+    ViewBag.Title = "EliminarEmpleado";
+}
+
+@Styles.Render("~/Content/RegistroUsuario.css")
+
+<h2>Eliminar Dueño</h2>
+<div class="login-block">
+    @using (Html.BeginForm("Eliminar", "GestionDuenos", FormMethod.Post))
+    {
+    <div class="singin">
+        <div class="central">
+            <div class="caja1">
+                <div class="form-group">
+                    @Html.Label("lblId", "Id", new { @class = "form-label" })
+                    <br />
+                    @Html.TextBox("idUsuario", dueño.idUsuario, new { placeholder = dueño.idUsuario, @readonly = true })
+                    <br />
+
+                    @Html.Label("lblCedula_identificacion", "Cedula", new { @class = "form-label" })
+                    <br />
+                    @Html.TextBox("cedula_identificacion", dueño.cedula_identificacion, new { placeholder = dueño.cedula_identificacion, @readonly = true })
+                    <br />
+
+                    @Html.Label("lblNombre", "Nombre", new { @class = "form-label" })
+                    <br />
+                    @Html.TextBox("nombre", dueño.nombre, new { placeholder = dueño.nombre, @readonly = true })
+                    <br />
+
+                    @Html.Label("lblApellido1", "Primer Apellido", new { @class = "form-label" })
+                    <br />
+                    @Html.TextBox("apellido1", dueño.apellido1, new { placeholder = dueño.apellido1, @readonly = true })
+                    <br />
+                </div>
+            </div>
+            <div class="caja2">
+                <div class="form-group">
+                    @Html.Label("lblApellido2", "Segundo Apellido", new { @class = "form-label" })
+                    <br />
+                    @Html.TextBox("apellido2", dueño.apellido2, new { placeholder = dueño.apellido2, @readonly = true })
+                    <br />
+
+                    @Html.Label("lblTelefono", "Telefono", new { @class = "form-label" })
+                    <br />
+                    @Html.TextBox("telefono", dueño.telefono, new { placeholder = dueño.telefono, @readonly = true })
+                    <br />
+
+                    @Html.Label("lblEmail", "Email", new { @class = "form-label" })
+                    <br />
+                    @Html.TextBox("email", dueño.email, new { placeholder = dueño.email, @readonly = true })
+                    <br />
+
+                    @Html.Label("lblPassword", "Contraseña", new { @class = "form-label" })
+                    <br />
+                    @Html.TextBox("password", dueño.password, new { @type = "password", placeholder = dueño.password, @readonly = true })
+                    <br />
+
+                    @Html.Label("lblRol", "Rol", new { @class = "form-label" })
+                    <br />
+                    @Html.TextBox("rol", dueño.idRol, new { placeholder = dueño.idRol, @readonly = true })
+                    <br />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button id="boton" value="Eliminar" class="button" type="submit">Eliminar</button>
+        </div>
+    </div>
+    }
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    $('#boton').on('click', function () {
+        Swal.fire({
+            icon: 'success',
+            title: 'Dueño Eliminado!',
+            showConfirmButton: false,
+            timer: 3000
+        });
+    })
+</script>

@@ -1,7 +1,6 @@
 ﻿using Bienes_Raices_HAXA.Models;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
-using Rotativa;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -70,12 +69,6 @@ namespace Bienes_Raices_HAXA.Controllers
             /*var respuestaFiltrada = categoria.Where(x => x.idCategoria == propiedad.idCategoria).ToList();*/
             return View("Reporte", respuesta); //"Reporte", respuestaFiltrada
         }
-
-        public ActionResult descargaPDF()
-        {
-            return new ActionAsPdf("Reporte", new { nombre = "CARO" }) { FileName = "ReportePropiedad.pdf" };
-        }
-
 
         public ActionResult ReporteCitas()
         {
@@ -745,7 +738,7 @@ namespace Bienes_Raices_HAXA.Controllers
                 doc.Close();
                 pw.Close();
                 return Redirect(@"https://bienesraiceshaxa.azurewebsites.net/Content/ReporteUsuarios.pdf");
-              //return Redirect(@"https://localhost:44335/Content/ReporteUsuarios.pdf");
+                //return Redirect(@"https://localhost:44335/Content/ReporteUsuarios.pdf");
             }
             catch (Exception ee)
             {
@@ -908,7 +901,7 @@ namespace Bienes_Raices_HAXA.Controllers
                 doc.Close();
                 pw.Close();
                 return Redirect(@"https://bienesraiceshaxa.azurewebsites.net/Content/ReporteEmpleados.pdf");
-              //return Redirect(@"https://localhost:44335/Content/ReporteEmpleados.pdf");
+                //return Redirect(@"https://localhost:44335/Content/ReporteEmpleados.pdf");
             }
             catch (Exception ee)
             {

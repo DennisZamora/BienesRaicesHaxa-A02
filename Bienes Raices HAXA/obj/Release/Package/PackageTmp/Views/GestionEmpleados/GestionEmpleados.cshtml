@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Bienes_Raices_HAXA.Models.Usuario>
+@{
+    ViewBag.Title = "GestionEmpleados";
+}
+
+@Styles.Render("~/Content/table.css")
+
+<h2>Gestión Empleados</h2>
+
+<a href="@Url.Action("RegistrarEmpleados","GestionEmpleados")" class="w3-bar-item w3-button">Registrar un nuevo empleado</a>
+
+<table class="table-fill">
+    <thead>
+    <th>Cédula</th>
+    <th>Nombre</th>
+    <th>Primer Apellido</th>
+    <th>Segundo Apellido</th>
+    <th>Teléfono</th>
+    <th>Correo</th>
+    <th></th>
+    <th></th>
+    </thead>
+
+    <tbody id="BusquedaDatos" class="table-hover">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.cedula_identificacion</td>
+                <td>@item.nombre</td>
+                <td>@item.apellido1 </td>
+                <td>@item.apellido2</td>
+                <td>@item.telefono</td>
+                <td>@item.email</td>
+                <td>@Html.ActionLink("Actualizar", "ActualizarEmpleado", new { identificacion = @item.cedula_identificacion })</td>
+                <td>@Html.ActionLink("Eliminar", "EliminarEmpleado", new { identificacion = @item.cedula_identificacion })</td>
+            </tr>
+
+        }
+    </tbody>
+</table>

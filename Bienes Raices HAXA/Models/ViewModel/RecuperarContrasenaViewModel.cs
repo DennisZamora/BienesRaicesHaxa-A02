@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Bienes_Raices_HAXA.Models.ViewModel
 {
@@ -14,6 +10,6 @@ namespace Bienes_Raices_HAXA.Models.ViewModel
 
         [Compare("contrasena")]
         [Required]
-        public string contrasena2{ get; set; }
-}
+        public string contrasena2 { get; set; }
+    }
 }
