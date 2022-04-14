@@ -233,9 +233,6 @@
     </Compile>
     <Compile Include="Models\Citas2.cs" />
     <Compile Include="Models\CitasModel.cs" />
-    <Compile Include="Models\database_firewall_rules.cs">
-      <DependentUpon>BRHaxaModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Estado.cs">
       <DependentUpon>BRHaxaModel.tt</DependentUpon>
     </Compile>
@@ -244,9 +241,6 @@
     <Compile Include="Models\GestionPropiedadModel.cs" />
     <Compile Include="Models\GestionUsuariosModel.cs" />
     <Compile Include="Models\Imagenes.cs">
-      <DependentUpon>BRHaxaModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ipv6_database_firewall_rules.cs">
       <DependentUpon>BRHaxaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PerfilModel.cs" />
@@ -360,6 +354,7 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="libman.json" />
     <EntityDeploy Include="Models\BRHaxaModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>BRHaxaModel.Designer.cs</LastGenOutput>
@@ -367,7 +362,6 @@
     <Content Include="Models\BRHaxaModel.edmx.diagram">
       <DependentUpon>BRHaxaModel.edmx</DependentUpon>
     </Content>
-    <Content Include="libman.json" />
     <None Include="Properties\PublishProfiles\BienesRaicesHAXA - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\BienesRaicesHAXA20220307 - Web Deploy.pubxml" />
     <Content Include="Scripts\bootstrap.bundle.js" />
