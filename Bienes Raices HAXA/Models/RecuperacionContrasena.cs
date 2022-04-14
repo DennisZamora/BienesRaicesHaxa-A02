@@ -17,7 +17,7 @@ namespace Bienes_Raices_HAXA.Models
 
                 if (oUser != null)
                 {
-                    //oUser.token_recovery = token;
+                    oUser.token_recovery = token;
                     contexto.SaveChanges();
                 }
                 return oUser;
@@ -29,13 +29,13 @@ namespace Bienes_Raices_HAXA.Models
             using (var contexto = new BRHaxaEntities())
             {
                 var oUser = (from x in contexto.Usuario
-                             //where x.token_recovery == model.token
+                             where x.token_recovery == model.token
                              select x).FirstOrDefault();
 
                 if (oUser != null)
                 {
                     oUser.password = model.contrasena;
-                    //oUser.token_recovery = null;
+                    oUser.token_recovery = null;
                     contexto.SaveChanges();
                     return true;
                 }
