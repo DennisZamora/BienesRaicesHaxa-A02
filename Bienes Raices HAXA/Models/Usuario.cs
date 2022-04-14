@@ -31,6 +31,7 @@ namespace Bienes_Raices_HAXA.Models
         public string email { get; set; }
         public string password { get; set; }
         public int idRol { get; set; }
+        public string token_recovery { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Citas> Citas { get; set; }
