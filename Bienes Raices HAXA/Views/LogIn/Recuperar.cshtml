@@ -1,0 +1,29 @@
+﻿@model Bienes_Raices_HAXA.Models.ViewModel.RecuperarContrasenaViewModel
+@{
+    ViewBag.Title = "Recuperar";
+}
+
+<div class="row">
+    <div class="col-md-6 offset-3">
+        <br />
+        <div class="form-style">
+            <form action="@Url.Content("~/logIn/Recuperar")" method="post">
+                @Html.HiddenFor(x => x.token)
+                <label> Escribe tu nueva contraseña</label>
+                @Html.PasswordFor(d => d.contrasena, new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.contrasena, null, new { style = "colore:red;" })
+                <label>Por favor vuelva a escribir tu nueva contraseña</label>
+                @Html.PasswordFor(d => d.contrasena2,  new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.contrasena2, null, new { style = "colore:red;" })
+                <br />
+                <div class="text-right">
+                    <button class="btn btn-primary">Recuperar</button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
