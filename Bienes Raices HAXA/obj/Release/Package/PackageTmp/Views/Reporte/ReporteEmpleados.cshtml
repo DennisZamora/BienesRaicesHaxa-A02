@@ -1,10 +1,10 @@
-﻿@model IEnumerable<Bienes_Raices_HAXA.Models.Citas>
+﻿@model IEnumerable<Bienes_Raices_HAXA.Models.Usuario>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>REPORTES</title>
-    @{ ViewBag.Title = "ReporteCitas";
+    @{ ViewBag.Title = "ReporteEmpleados";
         Layout = null;
     }
     @Styles.Render("~/Content/main.css")
@@ -25,7 +25,7 @@
             bottom: 0;
             height: inherit;
         }
-        </style>
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -87,36 +87,40 @@
 
     <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
     <div class="w3-main" style="margin-left:250px">
-
         <div>
-            <h1 class="title">Citas</h1>
-            <a href="@Url.Action("generarPDFCitas","Reporte")" class="button">Descargar PDF</a>
+            <h1 class="title">Empleados</h1>
+            <a href="@Url.Action("generarPDFEmpleados","Reporte")" class="button">Descargar PDF</a>
         </div>
         <br />
-        <table class="table-fill">
-            <thead>
-                <tr>
-                    <th class="table-left">ID</th>
-                    <th class="table-left">ID Usuario</th>
-                    <th class="table-left">ID Propiedad</th>
-                    <th class="table-left">Título</th>
-                    <th class="table-left">Fecha/hora inicio</th>
-                    <th class="table-left">Fecha/hora final</th>
-                </tr>
-            </thead>
-            <tbody class="table-hover">
-                @foreach (var item in Model)
-                {
+        @using (Html.BeginForm("ReporteEmpleados", "Reporte", FormMethod.Post))
+        {
+            <table class="table-fill">
+                <thead>
                     <tr>
-                        <td class="text-left">@item.idCita</td>
-                        <td class="text-left">@item.idUsuario</td>
-                        <td class="text-left">@item.idPropiedad</td>
-                        <td class="text-left">@item.titulo</td>
-                        <td class="text-left">@item.fechaInicio</td>
-                        <td class="text-left">@item.fechaFinal</td>
+                        <th class="table-left">ID Empleado</th>
+                        <th class="table-left">Nombre</th>
+                        <th class="table-left">Primer apellido</th>
+                        <th class="table-left">Segundo apellido</th>
+                        <th class="table-left">Teléfono</th>
+                        <th class="table-left">Email</th>
+                        <th class="table-left">Password</th>
                     </tr>
-                }
-            </tbody>
-        </table>
+                </thead>
+                <tbody class="table-hover">
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td class="text-left">@item.cedula_identificacion</td>
+                        <td class="text-left">@item.nombre</td>
+                        <td class="text-left">@item.apellido1</td>
+                        <td class="text-left">@item.apellido2</td>
+                        <td class="text-left">@item.telefono</td>
+                        <td class="text-left">@item.email</td>
+                        <td class="text-left">@item.password</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        }
 </body>
 </html>

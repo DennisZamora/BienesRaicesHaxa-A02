@@ -449,6 +449,8 @@
     <Content Include="Views\Home\Propiedades.cshtml" />
     <Content Include="Views\Reporte\ReporteCitas.cshtml" />
     <Content Include="Views\GestionEmpleados\RegistrarEmpleados.cshtml" />
+    <Content Include="Views\Reporte\ReporteEmpleados.cshtml" />
+    <Content Include="Views\Reporte\ReporteUsuarios.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
