@@ -63,3 +63,4 @@ D:\Universidad\Vll\DiseñoDesarrolloSistemas\BienesRaicesHaxa-A02\Bienes Raices 
 D:\Universidad\Vll\DiseñoDesarrolloSistemas\BienesRaicesHaxa-A02\Bienes Raices HAXA\obj\Debug\Bienes Raices HAXA.csproj.CopyComplete
 D:\Universidad\Vll\DiseñoDesarrolloSistemas\BienesRaicesHaxa-A02\Bienes Raices HAXA\obj\Debug\Bienes Raices HAXA.dll
 D:\Universidad\Vll\DiseñoDesarrolloSistemas\BienesRaicesHaxa-A02\Bienes Raices HAXA\obj\Debug\Bienes Raices HAXA.pdb
+D:\Universidad\Vll\DiseñoDesarrolloSistemas\BienesRaicesHaxa-A02\Bienes Raices HAXA\obj\Debug\Bienes Raices HAXA.csproj.AssemblyReference.cache

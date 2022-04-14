@@ -29,18 +29,14 @@ namespace Bienes_Raices_HAXA.Controllers
         }
 
         [HttpPost]
-        public ActionResult IniciarRecuperar(Models.ViewModel.RecuperarViewModel model)
+        public ActionResult IniciarRecuperar(Models.ViewModel.RecuperarViewModel model,string correo)
         {
             try
             {
-                if (!ModelState.IsValid)
-                {
-                    return View(model);
-                }
                 string token = GetSha256(Guid.NewGuid().ToString());
                 RecuperacionContrasena modelo = new RecuperacionContrasena();
-                var respuesta = modelo.recuperar(model, token);
-
+                var respuesta = modelo.recuperar(correo, token);
+                
                 if (respuesta != null)
                 {
                     SendEmail(respuesta.email, token);
@@ -63,18 +59,14 @@ namespace Bienes_Raices_HAXA.Controllers
             model.token = token;
             return View(model);
         }
+
         [HttpPost]
-        public ActionResult Recuperar(Models.ViewModel.RecuperarContrasenaViewModel model)
+        public ActionResult Recuperar(string token,string contrasena)
         {
             try
             {
-                if (!ModelState.IsValid)
-                {
-                    return View(model);
-                }
                 RecuperacionContrasena modelo = new RecuperacionContrasena();
-                modelo.recuperarContrasena(model);
-                ViewBag.Message = "Contraseña modifica con éxito";
+                modelo.recuperarContrasena(token, contrasena);
                 return View("Login");
             }
             catch (Exception)

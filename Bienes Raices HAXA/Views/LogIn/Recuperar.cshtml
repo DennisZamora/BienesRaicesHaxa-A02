@@ -7,7 +7,6 @@
     <div class="col-md-6 offset-3">
         <br />
         <div class="form-style">
-            <form action="@Url.Content("~/logIn/Recuperar")" method="post">
                 @Html.HiddenFor(x => x.token)
                 <label> Escribe tu nueva contraseña</label>
                 @Html.PasswordFor(d => d.contrasena, new { @class = "form-control" })
@@ -17,9 +16,8 @@
                 @Html.ValidationMessageFor(d => d.contrasena2, null, new { style = "colore:red;" })
                 <br />
                 <div class="text-right">
-                    <button class="btn btn-primary">Recuperar</button>
+                    <button class="btn btn-primary" onclick="recuperacion();">Recuperar</button>
                 </div>
-            </form>
 
         </div>
 

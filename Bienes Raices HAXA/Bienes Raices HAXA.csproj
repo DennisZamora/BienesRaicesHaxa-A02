@@ -319,6 +319,7 @@
     <Content Include="JS\EliminarEmpleado.js" />
     <Content Include="JS\index.js" />
     <Content Include="JS\perfil.js" />
+    <Content Include="JS\RecuperarContrasena.js" />
     <Content Include="JS\RegistrarEmpleado.js" />
     <Content Include="lib\limonte-sweetalert2\sweetalert2.all.js" />
     <Content Include="lib\limonte-sweetalert2\sweetalert2.all.min.js" />
