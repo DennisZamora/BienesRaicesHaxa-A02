@@ -7,17 +7,16 @@
     ViewBag.Title = "ActualizarDueño";
 }
 
-@Styles.Render("~/Content/RegistroUsuario.css")
+@Styles.Render("~/Content/Perfil.css")
 
 <h2>Actualizar Dueño</h2>
 <div class="login-block">
-    @using (Html.BeginForm("Actualizar", "GestionDueno", FormMethod.Post))
-    {
     <div class="singin">
         <div class="central">
             <div class="caja1">
                 <div class="form-group">
                     @Html.TextBox("idUsuario", dueño.idUsuario, new { placeholder = dueño.idUsuario, @hidden = true })
+                    @Html.TextBox("idRol", dueño.idRol, new { placeholder = dueño.idRol, @hidden = true })
                     <br />
 
                     @Html.Label("lblCedula_identificacion", "Cedula", new { @class = "form-label" })
@@ -61,23 +60,7 @@
             </div>
         </div>
         <div class="form-group">
-            <button id="boton" value="Actualizar" class="button" type="submit">Actualizar</button>
+            <button value="actualizar" id="actualizar" style="width:200px" onclick="actualizarDueno();" class="button" type="submit">Actualizar</button>
         </div>
     </div>
-    }
 </div>
-
-<script src="~/Scripts/jquery-3.4.1.min.js"></script>
-
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-<script>
-            $('#boton').on('click', function () {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Dueño actualizado!',
-                    showConfirmButton: false,
-                    timer: 3000
-                });
-            })
-</script>

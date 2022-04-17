@@ -3,14 +3,12 @@
 <html>
 <head>
     @{ ViewBag.Title = "Registro Dueño"; }
-    @Styles.Render("~/Content/RegistroUsuario.css")
+    @Styles.Render("~/Content/Perfil.css")
 </head>
 <body>
     <br />
     <div class="login-block">
 
-        @using (Html.BeginForm("Registrar", "GestionDueno", FormMethod.Post))
-        {
         <div class="signin">
             <h2 class="form-signin-heading">Registrar Dueño</h2>
             <div class="central">
@@ -47,10 +45,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <br />
-                <button value="Registrarse" class="button" type="submit">Registrarse</button>
+                <button value="registrar" id="registrar" style="width:200px" onclick="registrarDueno();" class="button" type="submit">Registrar</button>
             </div>
-        </div>}
+        </div>
     </div>
 </body>
 </html>

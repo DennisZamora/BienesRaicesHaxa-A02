@@ -32,7 +32,7 @@ namespace Bienes_Raices_HAXA.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-            return View("~/Views/Shared/Error.cshtml");
+            return View("~/Views/LogIn/Login.cshtml");
         }
     }
 }

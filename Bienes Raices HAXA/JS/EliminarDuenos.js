@@ -1,4 +1,4 @@
-﻿function eliminarEmpleado() {
+﻿function eliminarDueno() {
     var idUsuario = $.trim($("#idUsuario").val());
     var idRol = $.trim($("#idRol").val());
     var cedula_identificacion = $.trim($("#cedula_identificacion").val());
@@ -10,8 +10,8 @@
     var correo = $.trim($("#email").val());
 
     Swal.fire({
-        title: '¿Seguro de eliminar el empleado?',
-        text: "No se podra revertir  una vez eliminado",
+        title: '¿Seguro de eliminar el dueño?',
+        text: "No se podrá revertir  una vez eliminado",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -21,14 +21,14 @@
     }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire(
-                'Empleado eliminado!',
-                'El empleado ha sido eliminado',
+                'Dueño eliminado!',
+                'El dueño ha sido eliminado',
                 'success'
             )
 
             $.ajax({
                 type: 'POST',
-                url: '/GestionEmpleados/Eliminar',
+                url: '/GestionDueno/Eliminar',
                 data: {
                     idUsuario: idUsuario,
                     cedula_identificacion: cedula_identificacion,
