@@ -1,0 +1,61 @@
+﻿@model Bienes_Raices_HAXA.Models.Citas
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("AgregarCita", "Citas", FormMethod.Post, new { onsubmit = "return SubmitForm(this)" }))
+{
+
+@*<input type="text" id= @idUsuario />*@
+
+@Html.HiddenFor(x => x.idUsuario)
+@Html.HiddenFor(x => x.Propiedad)
+
+@*<div class="form-group">
+        @Html.Label("Titulo", new { @class = "control-label" })
+        @Html.EditorFor(x => x.titulo, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.titulo)
+    </div>*@
+<div class="form-group">
+    @Html.Label("Fecha inicio", new { @class = "control-label" })
+    @Html.EditorFor(x => x.fechaInicio, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(x => x.fechaInicio)
+</div>
+<div class="form-group">
+    @Html.Label("Hora", new { @class = "control-label" })
+    <select name="hora" id="hora">
+        <option value="8">8:00 am</option>
+        <option value="10">10:00 am</option>
+        <option value="13">1:00 pm</option>
+        <option value="15">3:00 pm</option>
+    </select>
+</div>
+
+<input type="button" onclick="CalcularFechaFinal();" value="Consultar">
+<div class="form-group">
+    @Html.Label("Fecha final", new { @class = "control-label" })
+    @Html.EditorFor(x => x.fechaFinal, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+    @Html.ValidationMessageFor(x => x.fechaFinal)
+</div>
+
+<div class="form-group">
+    <br>
+    <input type="submit" value="Agregar cita" onclick="validarDatos();" class="btn btn-primary" />
+</div>
+
+}
+
+<script type="text/javascript">
+    $(function () {
+        $("#fechaInicio").datepicker({
+            dateFormat: "yy-mm-dd",
+            showOn: "button",
+            minDate: new Date()
+        });
+    });
+    //$(function () {
+    //    var fechaInicio = $.trim($("#fechaInicio").val());
+    //    var hora = $.trim($("#hora").val());
+    //    $("#fechaFinal").val(fechaInicio);
+    //});
+</script>

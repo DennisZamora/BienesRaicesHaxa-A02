@@ -29,7 +29,7 @@ namespace Bienes_Raices_HAXA.Controllers
         }
 
         [HttpPost]
-        public ActionResult IniciarRecuperar(Models.ViewModel.RecuperarViewModel model, string correo)
+        public ActionResult IniciarRecuperar(Models.ViewModelR.RecuperarViewModel model, string correo)
         {
             try
             {
@@ -54,7 +54,7 @@ namespace Bienes_Raices_HAXA.Controllers
         [HttpGet]
         public ActionResult Recuperar(string token)
         {
-            Models.ViewModel.RecuperarContrasenaViewModel model = new Models.ViewModel.RecuperarContrasenaViewModel();
+            Models.ViewModelR.RecuperarContrasenaViewModel model = new Models.ViewModelR.RecuperarContrasenaViewModel();
 
             model.token = token;
             return View(model);

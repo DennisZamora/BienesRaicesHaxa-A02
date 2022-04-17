@@ -44,6 +44,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <LegacyPublishPropertiesPageEnabled>true</LegacyPublishPropertiesPageEnabled>
+    <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
@@ -85,9 +88,6 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Rotativa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Rotativa.1.7.3\lib\net461\Rotativa.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -228,7 +228,7 @@
     <Compile Include="Models\Categoria.cs">
       <DependentUpon>BRHaxaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Cita.cs">
+    <Compile Include="Models\Citas.cs">
       <DependentUpon>BRHaxaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Citas2.cs" />
@@ -240,7 +240,7 @@
     <Compile Include="Models\GestionEmpleadosModel.cs" />
     <Compile Include="Models\GestionPropiedadModel.cs" />
     <Compile Include="Models\GestionUsuariosModel.cs" />
-    <Compile Include="Models\Imagene.cs">
+    <Compile Include="Models\Imagenes.cs">
       <DependentUpon>BRHaxaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PerfilModel.cs" />
@@ -249,6 +249,9 @@
       <DependentUpon>BRHaxaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PropiedadV.cs" />
+    <Compile Include="Models\RecuperacionContrasena.cs" />
+    <Compile Include="Models\ViewModelR\RecuperarContrasenaViewModel.cs" />
+    <Compile Include="Models\ViewModelR\RecuperarViewModel.cs" />
     <Compile Include="Models\ReporteModel.cs" />
     <Compile Include="Models\Rol.cs">
       <DependentUpon>BRHaxaModel.tt</DependentUpon>
@@ -320,6 +323,7 @@
     <Content Include="JS\index.js" />
     <Content Include="JS\LogIn.js" />
     <Content Include="JS\perfil.js" />
+    <Content Include="JS\RecuperarContrasena.js" />
     <Content Include="JS\RegistrarDueno.js" />
     <Content Include="JS\RegistrarEmpleado.js" />
     <Content Include="lib\limonte-sweetalert2\sweetalert2.all.js" />
@@ -338,11 +342,6 @@
       <DependentUpon>BRHaxaModel.edmx</DependentUpon>
       <LastGenOutput>BRHaxaModel.cs</LastGenOutput>
     </Content>
-    <Content Include="Rotativa\help-wkhtmltoimage.txt" />
-    <Content Include="Rotativa\help-wkhtmltopdf.txt" />
-    <Content Include="Rotativa\wkhtmltoimage.exe" />
-    <Content Include="Rotativa\wkhtmltopdf.exe" />
-    <Content Include="App_Browsers\qt.browser" />
     <Content Include="Content\bootstrap.rtl.min.css.map" />
     <Content Include="Content\bootstrap.rtl.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
@@ -444,6 +443,10 @@
     <Content Include="Views\Home\Propiedades.cshtml" />
     <Content Include="Views\Reporte\ReporteCitas.cshtml" />
     <Content Include="Views\GestionEmpleados\RegistrarEmpleados.cshtml" />
+    <Content Include="Views\LogIn\Recuperar.cshtml" />
+    <Content Include="Views\LogIn\IniciarRecuperar.cshtml" />
+    <Content Include="Views\Reporte\ReporteEmpleados.cshtml" />
+    <Content Include="Views\Reporte\ReporteUsuarios.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

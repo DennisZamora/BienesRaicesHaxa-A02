@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7ad1a8faf09d49fda478ffd19d1c023e" Name="Diagram1">
+      <Diagram DiagramId="d0c629064184480fb0b258f7f44046fe" Name="Diagram1">
         <EntityTypeShape EntityType="BRHaxaModel.Categoria" Width="1.5" PointX="6" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="BRHaxaModel.Citas" Width="1.5" PointX="5.25" PointY="4.375" IsExpanded="true" />
         <EntityTypeShape EntityType="BRHaxaModel.Estado" Width="1.5" PointX="6" PointY="8" IsExpanded="true" />

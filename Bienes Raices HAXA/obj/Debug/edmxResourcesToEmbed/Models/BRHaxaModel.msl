@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="br_haxaModelStoreContainer" CdmEntityContainer="BRHaxaEntities">
-    <EntitySetMapping Name="Categorias">
-      <EntityTypeMapping TypeName="br_haxaModel.Categoria">
+  <EntityContainerMapping StorageEntityContainer="BRHaxaModelStoreContainer" CdmEntityContainer="BRHaxaEntities">
+    <EntitySetMapping Name="Categoria">
+      <EntityTypeMapping TypeName="BRHaxaModel.Categoria">
         <MappingFragment StoreEntitySet="Categoria">
           <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
@@ -10,7 +10,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Citas">
-      <EntityTypeMapping TypeName="br_haxaModel.Cita">
+      <EntityTypeMapping TypeName="BRHaxaModel.Citas">
         <MappingFragment StoreEntitySet="Citas">
           <ScalarProperty Name="idCita" ColumnName="idCita" />
           <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
@@ -21,8 +21,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Estadoes">
-      <EntityTypeMapping TypeName="br_haxaModel.Estado">
+    <EntitySetMapping Name="Estado">
+      <EntityTypeMapping TypeName="BRHaxaModel.Estado">
         <MappingFragment StoreEntitySet="Estado">
           <ScalarProperty Name="idEstado" ColumnName="idEstado" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
@@ -30,7 +30,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Imagenes">
-      <EntityTypeMapping TypeName="br_haxaModel.Imagene">
+      <EntityTypeMapping TypeName="BRHaxaModel.Imagenes">
         <MappingFragment StoreEntitySet="Imagenes">
           <ScalarProperty Name="idImagen" ColumnName="idImagen" />
           <ScalarProperty Name="idPropiedad" ColumnName="idPropiedad" />
@@ -38,8 +38,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Propiedads">
-      <EntityTypeMapping TypeName="br_haxaModel.Propiedad">
+    <EntitySetMapping Name="Propiedad">
+      <EntityTypeMapping TypeName="BRHaxaModel.Propiedad">
         <MappingFragment StoreEntitySet="Propiedad">
           <ScalarProperty Name="idPropiedad" ColumnName="idPropiedad" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
@@ -61,16 +61,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Rols">
-      <EntityTypeMapping TypeName="br_haxaModel.Rol">
+    <EntitySetMapping Name="Rol">
+      <EntityTypeMapping TypeName="BRHaxaModel.Rol">
         <MappingFragment StoreEntitySet="Rol">
           <ScalarProperty Name="idRol" ColumnName="idRol" />
           <ScalarProperty Name="nombreRol" ColumnName="nombreRol" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Usuarios">
-      <EntityTypeMapping TypeName="br_haxaModel.Usuario">
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="BRHaxaModel.Usuario">
         <MappingFragment StoreEntitySet="Usuario">
           <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
           <ScalarProperty Name="cedula_identificacion" ColumnName="cedula_identificacion" />
@@ -81,6 +81,7 @@
           <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="password" ColumnName="password" />
           <ScalarProperty Name="idRol" ColumnName="idRol" />
+          <ScalarProperty Name="token_recovery" ColumnName="token_recovery" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

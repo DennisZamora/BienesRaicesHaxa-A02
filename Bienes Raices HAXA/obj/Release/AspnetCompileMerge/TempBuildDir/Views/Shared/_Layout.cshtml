@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/main.css")
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+    <!-- qTip -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css" />
+
+    <!-- Full Calendar -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/fullcalendar.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/fullcalendar.print.css" media="print" />
+    <link href="~/Content/jquery-ui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/limonte-sweetalert2/sweetalert2.min.css" />
+    <link href="~/Content/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/jquery.timepicker.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar-header">
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+                <a href="@Url.Action("Index","Home")" class="w3-bar-item w3-button"><b>BR</b> HAXA</a>
+                <div class="navbar-collapse">
+                    <!-- Float links to the right. Hide them on small screens -->
+                    <div class="w3-right">
+                        @if (Session["Rol"] == null)
+                        {
+                            <a href="@Url.Action("Login","LogIn")" class="w3-bar-item w3-button">Iniciar sesion</a>
+                            <a href="@Url.Action("Register","Register")" class="w3-bar-item w3-button">Registrarse</a>
+                        }
+                        else if (Session["Rol"] != null)
+                        {
+                            if (Session["Rol"].ToString() == "2")
+                            {
+                                <a href="@Url.Action("GestionDueno","GestionDueno")" class="w3-bar-item w3-button">Gestion de Dueños</a>
+                                <a href="@Url.Action("GestionEmpleados","GestionEmpleados")" class="w3-bar-item w3-button">Gestion de Empleados</a>
+                                <a href="@Url.Action("Propiedades","AddPropiedad")" class="w3-bar-item w3-button">Propiedades</a>
+                            }
+                            else if (Session["Rol"].ToString() == "1")
+                            {
+                                <a href="@Url.Action("GestionDueno","GestionDueno")" class="w3-bar-item w3-button">Gestion de Dueños</a>
+                                <a href="@Url.Action("GestionEmpleados","GestionEmpleados")" class="w3-bar-item w3-button">Gestion de Empleados</a>
+                                <a href="@Url.Action("Propiedades","AddPropiedad")" class="w3-bar-item w3-button">Propiedades</a>
+                                <a href="@Url.Action("Reporte","Reporte")" class="w3-bar-item w3-button">Reportes</a>
+                            }
+                            <a href="@Url.Action("Perfil","Perfil")" class="w3-bar-item w3-button">Perfil</a>
+                            <a href="@Url.Action("Logout","Home")" class="w3-bar-item w3-button">Cerrar sesion</a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <!-- Footer -->
+        <footer class="w3-center w3-black w3-padding-16">
+            <p>&copy; @DateTime.Now.Year Bienes Raices HAXA</p>
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/scripts/bootstrap")
+
+    <!-- Include moment-->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+    <!-- qTip -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.js"></script>
+
+    <!-- Full Calendar -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/fullcalendar.min.js"></script>
+    <script src="~/Scripts/Calendario.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/JS/AgregarCita.js"></script>
+    <script src="~/JS/perfil.js"></script>
+    <script src="~/JS/ActualizarEmpleados.js"></script>
+    <script src="~/JS/EliminarEmpleado.js"></script>
+    <script src="~/JS/RegistrarEmpleado.js"></script>
+    <script src="~/JS/RecuperarContrasena.js"></script>
+    <script src="~/JS/index.js"></script>
+    <script src="~/lib/limonte-sweetalert2/sweetalert2.min.js"></script>
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <script src="~/Scripts/jquery.timepicker.min.js"></script>
+    <script src="~/Scripts/jquery.timepicker.js"></script>
+    <script src="~/Scripts/price_range_script.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
