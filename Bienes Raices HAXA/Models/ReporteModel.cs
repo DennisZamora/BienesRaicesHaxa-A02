@@ -126,5 +126,43 @@ namespace Bienes_Raices_HAXA.Models
         //          }
         //      }
         //  }
+
+        public List<Usuario> obtenerEmpleados()
+        {
+            using (var contexto = new BRHaxaEntities())
+            {
+                var lista = (from x in contexto.Usuario
+                             where x.idRol == 2 || x.idRol == 1
+                             select x).ToList();
+
+                if (lista.Count > 0)
+                {
+                    return lista;
+                }
+                else
+                {
+                    return new List<Usuario>();
+                }
+            }
+        }
+
+        public List<Usuario> obtenerUsuarios()
+        {
+            using (var contexto = new BRHaxaEntities())
+            {
+                var lista = (from x in contexto.Usuario
+                             where x.idRol == 4 || x.idRol == 3
+                             select x).ToList();
+
+                if (lista.Count > 0)
+                {
+                    return lista;
+                }
+                else
+                {
+                    return new List<Usuario>();
+                }
+            }
+        }
     }
 }

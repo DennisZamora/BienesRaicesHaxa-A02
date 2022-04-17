@@ -33,26 +33,26 @@
                     <div class="w3-right">
                         @if (Session["Rol"] == null)
                         {
-                            <a href="@Url.Action("Login","LogIn")" class="w3-bar-item w3-button">Iniciar sesión</a>
+                            <a href="@Url.Action("Login","LogIn")" class="w3-bar-item w3-button">Iniciar sesion</a>
                             <a href="@Url.Action("Register","Register")" class="w3-bar-item w3-button">Registrarse</a>
                         }
                         else if (Session["Rol"] != null)
                         {
                             if (Session["Rol"].ToString() == "2")
                             {
-                                <a href="@Url.Action("GestionDueno","GestionDueno")" class="w3-bar-item w3-button">Gestión de Dueños</a>
-                                <a href="@Url.Action("GestionEmpleados","GestionEmpleados")" class="w3-bar-item w3-button">Gestión de Empleados</a>
+                                <a href="@Url.Action("GestionDueno","GestionDueno")" class="w3-bar-item w3-button">Gestion de Dueños</a>
+                                <a href="@Url.Action("GestionEmpleados","GestionEmpleados")" class="w3-bar-item w3-button">Gestion de Empleados</a>
                                 <a href="@Url.Action("Propiedades","AddPropiedad")" class="w3-bar-item w3-button">Propiedades</a>
                             }
                             else if (Session["Rol"].ToString() == "1")
                             {
-                                <a href="@Url.Action("GestionDueno","GestionDueno")" class="w3-bar-item w3-button">Gestión de Dueños</a>
-                                <a href="@Url.Action("GestionEmpleados","GestionEmpleados")" class="w3-bar-item w3-button">Gestión de Empleados</a>
+                                <a href="@Url.Action("GestionDueno","GestionDueno")" class="w3-bar-item w3-button">Gestion de Dueños</a>
+                                <a href="@Url.Action("GestionEmpleados","GestionEmpleados")" class="w3-bar-item w3-button">Gestion de Empleados</a>
                                 <a href="@Url.Action("Propiedades","AddPropiedad")" class="w3-bar-item w3-button">Propiedades</a>
                                 <a href="@Url.Action("Reporte","Reporte")" class="w3-bar-item w3-button">Reportes</a>
                             }
                             <a href="@Url.Action("Perfil","Perfil")" class="w3-bar-item w3-button">Perfil</a>
-                            <a href="@Url.Action("Logout","Home")" class="w3-bar-item w3-button">Cerrar sesión</a>
+                            <a href="@Url.Action("Logout","Home")" class="w3-bar-item w3-button">Cerrar sesion</a>
                         }
                     </div>
                 </div>
@@ -87,11 +87,7 @@
     <script src="~/JS/ActualizarEmpleados.js"></script>
     <script src="~/JS/EliminarEmpleado.js"></script>
     <script src="~/JS/RegistrarEmpleado.js"></script>
-    <script src="~/JS/ActualizarDuenos.js"></script>
-    <script src="~/JS/RegistrarDueno.js"></script>
-    <script src="~/JS/EliminarDuenos.js"></script>
-    <script src="~/JS/LogIn.js"></script>
-    @*<script src="~/JS/LogIn2.js"></script>*@
+    <script src="~/JS/RecuperarContrasena.js"></script>
     <script src="~/JS/index.js"></script>
     <script src="~/lib/limonte-sweetalert2/sweetalert2.min.js"></script>
     <script src="~/Scripts/jquery-ui.min.js"></script>

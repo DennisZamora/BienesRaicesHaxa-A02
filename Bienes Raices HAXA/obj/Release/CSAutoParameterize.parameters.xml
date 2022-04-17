@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="BRHaxaEntities-Web.config Connection String" description="BRHaxaEntities Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="metadata=res://*/Models.BRHaxaModel.csdl|res://*/Models.BRHaxaModel.ssdl|res://*/Models.BRHaxaModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=br-haxa.database.windows.net;initial catalog=br_haxa;user id=brhaxawp;password=brhaxaSQL01;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+  <parameter name="BRHaxaEntities-Web.config Connection String" description="BRHaxaEntities Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="metadata=res://*/Models.BRHaxaModel.csdl|res://*/Models.BRHaxaModel.ssdl|res://*/Models.BRHaxaModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=br-haxa.database.windows.net;initial catalog=br_haxa;persist security info=True;user id=brhaxawp;password=brhaxaSQL01;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="C:\\Users\\oscar\\Documents\\AA-BRHaxa02\\BienesRaicesHaxa-A02\\Bienes\ Raices\ HAXA\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BRHaxaEntities']/@connectionString" />
   </parameter>
 </parameters>
