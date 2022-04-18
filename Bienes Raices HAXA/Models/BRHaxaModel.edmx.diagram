@@ -7,7 +7,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Diagram DiagramId="d0c629064184480fb0b258f7f44046fe" Name="Diagram1">
+=======
+      <Diagram DiagramId="20ce0a962c114b6aa3b2d2e21e512048" Name="Diagram1">
+>>>>>>> parent of 31487e4 (NO PUSHEAR 2.0)
 =======
       <Diagram DiagramId="20ce0a962c114b6aa3b2d2e21e512048" Name="Diagram1">
 >>>>>>> parent of 31487e4 (NO PUSHEAR 2.0)
@@ -26,7 +30,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <EntityTypeShape EntityType="BRHaxaModel.Usuario" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+=======
+        <EntityTypeShape EntityType="BRHaxaModel.Usuario" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BRHaxaModel.database_firewall_rules" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BRHaxaModel.ipv6_database_firewall_rules" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+>>>>>>> parent of 31487e4 (NO PUSHEAR 2.0)
 =======
         <EntityTypeShape EntityType="BRHaxaModel.Usuario" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="BRHaxaModel.database_firewall_rules" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
