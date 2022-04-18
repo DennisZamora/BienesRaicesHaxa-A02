@@ -246,6 +246,12 @@
     <Compile Include="Models\Imagenes.cs">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <DependentUpon>BRHaxaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ipv6_database_firewall_rules.cs">
+>>>>>>> parent of 31487e4 (NO PUSHEAR 2.0)
 =======
       <DependentUpon>BRHaxaModel.tt</DependentUpon>
     </Compile>
@@ -336,8 +342,11 @@
     <Content Include="JS\perfil.js" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Content Include="JS\RecuperarContrasena.js" />
     <Content Include="JS\RegistrarDueno.js" />
+=======
+>>>>>>> parent of 31487e4 (NO PUSHEAR 2.0)
 =======
 >>>>>>> parent of 31487e4 (NO PUSHEAR 2.0)
 =======
