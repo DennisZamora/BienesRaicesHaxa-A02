@@ -32,5 +32,10 @@ namespace Bienes_Raices_HAXA.Models
         public virtual DbSet<Propiedad> Propiedad { get; set; }
         public virtual DbSet<Rol> Rol { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
+<<<<<<< HEAD
+=======
+        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
+        public virtual DbSet<ipv6_database_firewall_rules> ipv6_database_firewall_rules { get; set; }
+>>>>>>> parent of 31487e4 (NO PUSHEAR 2.0)
     }
 }

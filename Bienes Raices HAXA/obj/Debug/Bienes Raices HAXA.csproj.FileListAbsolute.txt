@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Bienes Raices HAXA.dll.config
 C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Bienes Raices HAXA.dll
 C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\bin\Bienes Raices HAXA.pdb
@@ -63,3 +64,5 @@ C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\obj
 C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\obj\Debug\Bienes Raices HAXA.csproj.CopyComplete
 C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\obj\Debug\Bienes Raices HAXA.dll
 C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA\obj\Debug\Bienes Raices HAXA.pdb
+=======
+>>>>>>> parent of 31487e4 (NO PUSHEAR 2.0)
