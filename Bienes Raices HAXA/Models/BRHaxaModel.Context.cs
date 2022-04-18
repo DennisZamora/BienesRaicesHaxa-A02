@@ -36,6 +36,11 @@ namespace Bienes_Raices_HAXA.Models
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
+        public virtual DbSet<ipv6_database_firewall_rules> ipv6_database_firewall_rules { get; set; }
+>>>>>>> parent of 31487e4 (NO PUSHEAR 2.0)
 =======
         public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
         public virtual DbSet<ipv6_database_firewall_rules> ipv6_database_firewall_rules { get; set; }

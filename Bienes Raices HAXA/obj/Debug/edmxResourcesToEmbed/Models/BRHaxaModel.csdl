@@ -233,6 +233,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" />
+    <EntitySet Name="ipv6_database_firewall_rules" EntityType="Self.ipv6_database_firewall_rules" />
+>>>>>>> parent of 31487e4 (NO PUSHEAR 2.0)
 =======
     <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" />
     <EntitySet Name="ipv6_database_firewall_rules" EntityType="Self.ipv6_database_firewall_rules" />

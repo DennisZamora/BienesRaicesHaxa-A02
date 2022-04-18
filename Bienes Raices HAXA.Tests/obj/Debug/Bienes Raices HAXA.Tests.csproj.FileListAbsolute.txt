@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\aleDi\Desktop\BRHaxa\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\aleDi\Desktop\BRHaxa\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\aleDi\Desktop\BRHaxa\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -151,6 +152,8 @@ C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tes
 C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\obj\Debug\Bienes Raices HAXA.Tests.csproj.CopyComplete
 C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\obj\Debug\Bienes Raices HAXA.Tests.dll
 C:\Users\oscar\Documents\AA-BRHaxa02\BienesRaicesHaxa-A02\Bienes Raices HAXA.Tests\obj\Debug\Bienes Raices HAXA.Tests.pdb
+=======
+>>>>>>> parent of 31487e4 (NO PUSHEAR 2.0)
 =======
 >>>>>>> parent of 31487e4 (NO PUSHEAR 2.0)
 =======
