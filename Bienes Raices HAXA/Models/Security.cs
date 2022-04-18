@@ -24,7 +24,7 @@ namespace Bienes_Raices_HAXA.Models
                         usuario.telefono = model.telefono;
                         usuario.email = model.email;
                         usuario.password = model.password;
-                        usuario.idRol = 3;
+                        usuario.idRol = 1;
 
                         db.Usuario.Add(usuario);
                         db.SaveChanges();

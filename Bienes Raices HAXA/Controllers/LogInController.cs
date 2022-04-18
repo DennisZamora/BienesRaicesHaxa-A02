@@ -1,16 +1,10 @@
 ﻿using Bienes_Raices_HAXA.Models;
-using System;
-using System.Net.Mail;
-using System.Security.Cryptography;
-using System.Text;
 using System.Web.Mvc;
 
 namespace Bienes_Raices_HAXA.Controllers
 {
     public class LogInController : Controller
     {
-
-        public string urlDomain = "https://bienesraiceshaxa.azurewebsites.net/";
         public ActionResult Login()
         {
             if (Session["email"] != null)
@@ -22,6 +16,7 @@ namespace Bienes_Raices_HAXA.Controllers
                 return View();
             }
         }
+<<<<<<< HEAD
         [HttpGet]
         public ActionResult IniciarRecuperar()
         {
@@ -111,6 +106,8 @@ namespace Bienes_Raices_HAXA.Controllers
         #endregion
 
 
+=======
+>>>>>>> parent of d1ffbfe (Merge branch 'main' of https://github.com/DennisZamora/BienesRaicesHaxa-A02)
 
         [HttpPost]
         public ActionResult validacionLogin(string email, string password)
@@ -129,7 +126,5 @@ namespace Bienes_Raices_HAXA.Controllers
 
             return View("~/Views/LogIn/Login.cshtml");
         }
-
-
     }
 }
